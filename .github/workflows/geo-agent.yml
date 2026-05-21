@@ -2,8 +2,8 @@ name: GEO Content Agent
 
 on:
   schedule:
-    # Lunes 9:00 AM México (UTC-6) = 15:00 UTC
-    - cron: "0 15 * * 1"
+    # Diario 9:00 AM México (UTC-6) = 15:00 UTC
+    - cron: "0 15 * * *"
   workflow_dispatch: # permite correrlo manualmente desde GitHub
 
 jobs:
