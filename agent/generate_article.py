@@ -11,7 +11,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 import anthropic
-from google.oauth2 import service_account
+from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 
 # ── Config ────────────────────────────────────────────────────────────────────
@@ -229,15 +229,26 @@ def update_sitemap(slug: str):
 
 
 def request_indexing(slug: str):
-    """Notify Google Indexing API of the new article URL."""
+    """Notify Google Indexing API of the new article URL using desktop OAuth credentials."""
     creds_json = os.environ.get("GOOGLE_OAUTH_CREDENTIALS")
     if not creds_json:
         print("[indexing] GOOGLE_OAUTH_CREDENTIALS no definido — omitiendo")
         return
 
-    credentials = service_account.Credentials.from_service_account_info(
-        json.loads(creds_json),
-        scopes=["https://www.googleapis.com/auth/indexing"]
+    data = json.loads(creds_json)
+
+    # Support both the raw credential dict and the file format produced by
+    # google-auth-oauthlib (which nests everything under an "installed" key).
+    if "installed" in data:
+        data = data["installed"]
+
+    credentials = Credentials(
+        token=None,
+        refresh_token=data["refresh_token"],
+        token_uri="https://oauth2.googleapis.com/token",
+        client_id=data["client_id"],
+        client_secret=data["client_secret"],
+        scopes=["https://www.googleapis.com/auth/indexing"],
     )
     service = build("indexing", "v3", credentials=credentials)
     url = f"{SITE_URL}/blog/{slug}.html"
