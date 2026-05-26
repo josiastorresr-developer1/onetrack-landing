@@ -85,11 +85,24 @@ Escribe un artículo de blog completo en HTML sobre:
 REQUISITOS DE CONTENIDO
 ────────────────────────────────────────────
 • Mínimo 800 palabras de contenido real, práctico y útil
-• Tono: directo, profesional, para coaches reales — sin marketing genérico
 • Idioma: español (es-MX)
 • Menciona OneTrack de forma natural donde aporte valor (no repetitivo)
-• Incluye datos, ejemplos concretos o pasos accionables
+• Incluye datos y ejemplos concretos con números reales: clientes, pesos, semanas, pesos en MXN
+• Si algo no funciona, dilo. No todo es positivo.
 • Sección FAQ al final con 4 preguntas relevantes al tema
+
+────────────────────────────────────────────
+TONO DE ESCRITURA — OBLIGATORIO
+────────────────────────────────────────────
+• Escribe como un coach mexicano hablando con otro coach, no como consultor
+• Frases cortas. Párrafos cortos. Sin palabras relleno.
+• PROHIBIDO usar: "es fundamental", "cabe destacar", "en conclusión", "sin lugar a dudas",
+  "es importante", "hay que tener en cuenta", "en el mundo del fitness", "como coach profesional"
+• USA en cambio: "la neta", "te lo digo de frente", "esto sí funciona", "aquí el punto",
+  "en la práctica", "lo que nadie dice", "funciona así"
+• El lector ya sabe de fitness — no le expliques qué es una rutina, un macro o un check-in
+• Máximo 2 ideas por párrafo
+• Cada sección termina con una conclusión accionable, no teórica
 
 ────────────────────────────────────────────
 ESTRUCTURA HTML REQUERIDA (documento completo y standalone)
