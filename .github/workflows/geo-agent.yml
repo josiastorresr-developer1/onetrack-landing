@@ -39,7 +39,7 @@ jobs:
           SLUG=$(cat .geo_last_slug 2>/dev/null || echo "new-article")
           rm -f .geo_last_slug
 
-          git add blog/ sitemap.xml agent/topics.json
+          git add blog/ sitemap.xml agent/topics.json index.html
 
           # Only commit if there are staged changes
           if git diff --staged --quiet; then

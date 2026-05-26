@@ -6,7 +6,9 @@ Generates SEO/GEO-optimized blog articles and submits them to Google Search Cons
 
 import json
 import os
+import re
 import sys
+import urllib.request
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -271,6 +273,45 @@ def request_indexing(slug: str):
     print(f"[indexing] respuesta Google: {resp}")
 
 
+def sync_app_store_rating():
+    """Fetch live ratingCount from iTunes API and update index.html schema."""
+    app_id = "6761740866"
+    url = f"https://itunes.apple.com/mx/lookup?id={app_id}"
+    try:
+        with urllib.request.urlopen(url, timeout=10) as resp:
+            data = json.loads(resp.read())
+        if not data.get("resultCount"):
+            print("[rating] App no encontrada en iTunes API")
+            return
+        result = data["results"][0]
+        count = str(result.get("userRatingCount", 0))
+        rating = str(result.get("averageUserRating", 5))
+    except Exception as e:
+        print(f"[rating] error al consultar iTunes API (no crítico): {e}")
+        return
+
+    index_path = REPO_ROOT / "index.html"
+    content = index_path.read_text(encoding="utf-8")
+
+    updated = re.sub(
+        r'(\\"ratingCount\\":\s*\\")[0-9]+(\\")',
+        rf'\g<1>{count}\g<2>',
+        content
+    )
+    updated = re.sub(
+        r'(\\"ratingValue\\":\s*\\")[0-9.]+(\\")',
+        rf'\g<1>{rating}\g<2>',
+        updated
+    )
+
+    if updated == content:
+        print(f"[rating] sin cambios (ratingCount ya es {count})")
+        return
+
+    index_path.write_text(updated, encoding="utf-8")
+    print(f"[rating] actualizado → ratingCount={count}, ratingValue={rating}")
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -296,7 +337,10 @@ def main():
     # 4. Update sitemap
     update_sitemap(topic["slug"])
 
-    # 5. Request Google indexing (non-fatal if it fails)
+    # 5. Sync App Store rating count in index.html
+    sync_app_store_rating()
+
+    # 6. Request Google indexing (non-fatal if it fails)
     try:
         request_indexing(topic["slug"])
     except Exception as e:
