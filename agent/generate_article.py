@@ -44,25 +44,51 @@ def load_topic() -> dict:
     return topic
 
 
-def generate_fallback_topic(client: anthropic.Anthropic) -> dict:
-    """Ask Claude to invent a topic when topics.json is exhausted."""
-    print("[topics] topics.json vacío — generando tema con Claude...")
+def refill_topics(client: anthropic.Anthropic) -> dict:
+    """Ask Claude to generate 20 new topics, save them to topics.json, and return the first one."""
+    print("[topics] topics.json vacío — generando 20 temas nuevos con Claude...")
+
+    # Collect slugs already published to avoid duplicates
+    published = [f.stem for f in (REPO_ROOT / "blog").glob("*.html") if f.stem != "index"]
+
     msg = client.messages.create(
         model="claude-opus-4-6",
-        max_tokens=300,
+        max_tokens=2000,
         messages=[{
             "role": "user",
             "content": (
-                "Eres el equipo de contenido de OneTrack, una app para coaches de fitness en México y LATAM.\n"
-                "Genera un tema para un artículo de blog basado en búsquedas conversacionales reales "
-                "que haría un coach profesional en Google, ChatGPT o Perplexity.\n"
-                "El tema debe ser específico, útil y en español (es-MX).\n\n"
-                "Responde ÚNICAMENTE con JSON válido, sin texto adicional:\n"
-                '{"slug": "slug-unico-con-guiones", "titulo": "Título del artículo"}'
+                "Eres el equipo de contenido de OneTrack, una plataforma iOS para coaches y nutriólogos en México y LATAM.\n\n"
+                "Features: rutinas, planes de dieta con macros, análisis de macros con IA, InBody AI, "
+                "check-ins semanales, plantillas reutilizables, dashboard de adherencia, widget de rutina.\n"
+                "Planes: Free (3 clientes), Starter $9.99, Growth $19.99, Unlimited $49.99.\n\n"
+                "Genera exactamente 20 temas para artículos de blog basados en búsquedas conversacionales "
+                "reales que haría un coach o nutriólogo profesional en Google, ChatGPT o Perplexity.\n\n"
+                "Criterios:\n"
+                "- Específicos y accionables (no genéricos)\n"
+                "- Variados: casos de éxito, guías prácticas, comparativas, errores comunes, herramientas\n"
+                "- Relevantes para México y LATAM\n"
+                "- En español (es-MX)\n"
+                f"- NO repetir estos slugs ya publicados: {published}\n\n"
+                "Responde ÚNICAMENTE con un array JSON válido de 20 objetos, sin texto adicional:\n"
+                '[{"slug": "slug-con-guiones", "titulo": "Título del artículo"}, ...]'
             )
         }]
     )
-    return json.loads(msg.content[0].text.strip())
+
+    raw = msg.content[0].text.strip()
+    if raw.startswith("```"):
+        raw = raw.split("\n", 1)[1]
+        if raw.endswith("```"):
+            raw = raw.rsplit("```", 1)[0]
+    topics = json.loads(raw.strip())
+    first = topics.pop(0)
+
+    # Save remaining 19 to topics.json for future runs
+    TOPICS_FILE.write_text(
+        json.dumps(topics, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    print(f"[topics] {len(topics)} temas guardados en topics.json para próximas ejecuciones")
+    return first
 
 
 def generate_article_html(client: anthropic.Anthropic, topic: dict) -> str:
@@ -344,7 +370,7 @@ def main():
     # 1. Get topic
     topic = load_topic()
     if topic is None:
-        topic = generate_fallback_topic(client)
+        topic = refill_topics(client)
 
     print(f"[agent] Generando artículo: {topic['titulo']}")
 
