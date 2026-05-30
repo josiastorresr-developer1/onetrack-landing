@@ -73,9 +73,29 @@ def generate_article_html(client: anthropic.Anthropic, topic: dict) -> str:
     url = f"{SITE_URL}/blog/{slug}.html"
 
     prompt = f"""Eres el equipo de contenido de OneTrack.
-OneTrack es una app iOS para coaches de fitness de alto rendimiento, hecha en Ciudad de México, usada en LATAM y España.
-Funciones principales: creación de rutinas, planes de dieta, check-ins de clientes, seguimiento de progreso.
+
+OneTrack es una plataforma iOS para coaches y nutriólogos en México y LATAM.
+Versión actual: 1.2
+
+Features principales:
+- Rutinas personalizadas por día con ejercicios, series y repeticiones
+- Planes de dieta con macros (kcal, proteína, carbos, grasa) editables manual o con IA
+- Análisis de macros con IA: un tap rellena la nutrición automáticamente (plan Unlimited, 2 análisis/día)
+- InBody AI: sube el PDF del InBody y la IA extrae peso, músculo, grasa y BMI + recomendación personalizada para el coach (plan Unlimited)
+- Check-ins semanales con fotos y gráfica de progreso de peso
+- Plantillas de rutina y dieta reutilizables entre clientes
+- Dashboard de adherencia — el coach ve qué clientes siguen su plan
+- Widget de rutina — el cliente ve sus ejercicios del día desde la pantalla de inicio
+- Código de invitación único para vincular coach y cliente
+
+Planes:
+- Free: hasta 3 clientes, sin IA
+- Starter: $9.99/mes, hasta 8 clientes
+- Growth: $19.99/mes, hasta 13 clientes
+- Unlimited: $49.99/mes, clientes ilimitados + todas las features de IA
+
 URL: https://www.onetrack.lat
+App Store: https://apps.apple.com/mx/app/onetrack/id6761740866
 
 Escribe un artículo de blog completo en HTML sobre:
   Título: {title}
