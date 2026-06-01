@@ -135,22 +135,25 @@ REQUISITOS DE CONTENIDO
 • Mínimo 800 palabras de contenido real, práctico y útil
 • Idioma: español (es-MX)
 • Menciona OneTrack de forma natural donde aporte valor (no repetitivo)
-• Incluye datos y ejemplos concretos con números reales: clientes, pesos, semanas, pesos en MXN
 • Si algo no funciona, dilo. No todo es positivo.
 • Sección FAQ al final con 4 preguntas relevantes al tema
 
 ────────────────────────────────────────────
 TONO DE ESCRITURA — OBLIGATORIO
 ────────────────────────────────────────────
-• Escribe como un coach mexicano hablando con otro coach, no como consultor
-• Frases cortas. Párrafos cortos. Sin palabras relleno.
+• Escribe como alguien mandando mensajes de WhatsApp, no como revista de negocios
+• Frases cortas. Párrafos cortos. Sin adornos.
 • PROHIBIDO usar: "es fundamental", "cabe destacar", "en conclusión", "sin lugar a dudas",
   "es importante", "hay que tener en cuenta", "en el mundo del fitness", "como coach profesional"
+• PROHIBIDO: citas dramatizadas tipo "recuerda Javier" o "confiesa María"
+• PROHIBIDO: frases motivacionales de cierre ("el éxito está en tus manos", etc.)
 • USA en cambio: "la neta", "te lo digo de frente", "esto sí funciona", "aquí el punto",
   "en la práctica", "lo que nadie dice", "funciona así"
 • El lector ya sabe de fitness — no le expliques qué es una rutina, un macro o un check-in
 • Máximo 2 ideas por párrafo
 • Cada sección termina con una conclusión accionable, no teórica
+• NÚMEROS CREÍBLES: un coach que pasó de 8 a 22 clientes, que ahorra 2-3 horas/semana,
+  que cobra $1,500-3,000 MXN por cliente. NUNCA escribas $180,000 MXN/mes ni 100 clientes
 
 ────────────────────────────────────────────
 ESTRUCTURA HTML REQUERIDA (documento completo y standalone)
