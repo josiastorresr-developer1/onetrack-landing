@@ -361,6 +361,100 @@ def sync_app_store_rating():
     print(f"[rating] actualizado → ratingCount={count}, ratingValue={rating}")
 
 
+def rebuild_blog_index():
+    """Regenerate blog/index.html listing all articles sorted newest first."""
+    articles = []
+    for f in sorted(BLOG_DIR.glob("*.html")):
+        if f.stem == "index":
+            continue
+        text = f.read_text(encoding="utf-8")
+        title_m = re.search(r'<title>([^<]+)</title>', text)
+        desc_m  = re.search(r'<meta name="description" content="([^"]+)"', text)
+        date_m  = re.search(r'"datePublished":\s*"([^"]+)"', text)
+        h1_m    = re.search(r'<h1[^>]*>([^<]+)</h1>', text)
+
+        title = (title_m.group(1).split("|")[0].strip() if title_m else
+                 h1_m.group(1).strip() if h1_m else f.stem)
+        desc  = desc_m.group(1) if desc_m else ""
+        date  = date_m.group(1) if date_m else "2026-05-19"
+        articles.append({"slug": f.name, "title": title, "desc": desc, "date": date})
+
+    articles.sort(key=lambda a: a["date"], reverse=True)
+
+    cards = ""
+    for a in articles:
+        cards += f"""
+    <a href="/blog/{a['slug']}" class="card">
+      <div class="card-date">{a['date']}</div>
+      <h2>{a['title']}</h2>
+      <p>{a['desc']}</p>
+      <span class="read-more">Leer artículo →</span>
+    </a>"""
+
+    year = datetime.now(TZ_MEXICO).year
+    html = f"""<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog para coaches de fitness | OneTrack</title>
+  <meta name="description" content="Guías, casos de estudio y recursos prácticos para coaches y nutriólogos en México y LATAM. Publicado por el equipo de OneTrack.">
+  <link rel="canonical" href="{SITE_URL}/blog/index.html">
+  <meta property="og:title" content="Blog para coaches de fitness | OneTrack">
+  <meta property="og:description" content="Guías, casos de estudio y recursos prácticos para coaches y nutriólogos en México y LATAM.">
+  <meta property="og:url" content="{SITE_URL}/blog/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OneTrack">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{{margin:0;padding:0;box-sizing:border-box}}
+    body{{background:#070B16;color:#E8EAF0;font-family:'Inter',sans-serif;line-height:1.6;min-height:100vh}}
+    nav{{background:rgba(7,11,22,0.92);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;
+         padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1a2340}}
+    nav a.logo{{color:#fff;font-weight:800;font-size:1.2rem;text-decoration:none}}
+    nav a.cta{{background:#5B91F5;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:.875rem;font-weight:600}}
+    header{{max-width:860px;margin:0 auto;padding:64px 24px 40px;border-bottom:1px solid #1a2340}}
+    header h1{{font-size:2.2rem;font-weight:800;color:#fff;margin-bottom:12px}}
+    header p{{color:#8a94a8;font-size:1rem}}
+    main{{max-width:860px;margin:0 auto;padding:48px 24px 80px}}
+    .grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}}
+    .card{{background:#0d1424;border:1px solid #1a2340;border-radius:14px;padding:28px;
+           text-decoration:none;color:inherit;transition:border-color .2s,transform .2s;
+           display:flex;flex-direction:column;gap:10px}}
+    .card:hover{{border-color:#5B91F5;transform:translateY(-2px)}}
+    .card-date{{color:#5B91F5;font-size:.8rem;font-weight:600;letter-spacing:.04em}}
+    .card h2{{font-size:1.05rem;font-weight:700;color:#fff;line-height:1.3}}
+    .card p{{color:#8a94a8;font-size:.9rem;flex:1}}
+    .read-more{{color:#5B91F5;font-size:.875rem;font-weight:600;margin-top:4px}}
+    footer{{border-top:1px solid #1a2340;padding:32px 24px;text-align:center;color:#6b7a99;font-size:.875rem}}
+    footer a{{color:#5B91F5;text-decoration:none}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">OneTrack</a>
+    <a href="/" class="cta">Descargar app</a>
+  </nav>
+  <header>
+    <h1>Blog para coaches de fitness</h1>
+    <p>{len(articles)} artículos — guías, casos de estudio y recursos para coaches en México y LATAM.</p>
+  </header>
+  <main>
+    <div class="grid">{cards}
+    </div>
+  </main>
+  <footer>
+    <a href="{SITE_URL}">← Volver a OneTrack</a>
+    <p style="margin-top:8px">© {year} OneTrack. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>"""
+
+    (BLOG_DIR / "index.html").write_text(html, encoding="utf-8")
+    print(f"[blog-index] reconstruido con {len(articles)} artículos")
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -386,10 +480,13 @@ def main():
     # 4. Update sitemap
     update_sitemap(topic["slug"])
 
-    # 5. Sync App Store rating count in index.html
+    # 5. Rebuild blog/index.html with all articles
+    rebuild_blog_index()
+
+    # 6. Sync App Store rating count in index.html
     sync_app_store_rating()
 
-    # 6. Request Google indexing (non-fatal if it fails)
+    # 7. Request Google indexing (non-fatal if it fails)
     try:
         request_indexing(topic["slug"])
     except Exception as e:
