@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo usar inteligencia artificial para calcular macros de tus clientes automáticamente | Blog OneTrack</title>
+  <meta name="description" content="Aprende a calcular macros con IA para tus clientes en segundos. Guía práctica para coaches y nutriólogos que quieren dejar de perder horas en Excel.">
+  <link rel="canonical" href="https://www.onetrack.lat/blog/como-usar-ia-para-calcular-macros-automaticamente.html">
+  <meta property="og:title" content="Cómo usar inteligencia artificial para calcular macros de tus clientes automáticamente">
+  <meta property="og:description" content="Aprende a calcular macros con IA para tus clientes en segundos. Guía práctica para coaches y nutriólogos que quieren dejar de perder horas en Excel.">
+  <meta property="og:url" content="https://www.onetrack.lat/blog/como-usar-ia-para-calcular-macros-automaticamente.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="OneTrack">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cómo usar inteligencia artificial para calcular macros de tus clientes automáticamente">
+  <meta name="twitter:description" content="Aprende a calcular macros con IA para tus clientes en segundos. Guía práctica para coaches y nutriólogos que quieren dejar de perder horas en Excel.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cómo usar inteligencia artificial para calcular macros de tus clientes automáticamente",
+    "author": {"@type": "Organization", "name": "OneTrack", "url": "https://www.onetrack.lat"},
+    "publisher": {
+      "@type": "Organization",
+      "name": "OneTrack",
+      "url": "https://www.onetrack.lat",
+      "logo": {"@type": "ImageObject", "url": "https://www.onetrack.lat/logo.png"}
+    },
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "url": "https://www.onetrack.lat/blog/como-usar-ia-para-calcular-macros-automaticamente.html",
+    "inLanguage": "es-MX",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.onetrack.lat/blog/como-usar-ia-para-calcular-macros-automaticamente.html"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué tan preciso es el cálculo de macros con IA comparado con hacerlo manual?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En la mayoría de los casos la IA da resultados muy cercanos a lo que calcularías tú con fórmulas estándar (Harris-Benedict, Mifflin-St Jeor). La diferencia suele ser de 50-100 kcal. Donde sí necesitas meter mano es en casos clínicos especiales: diabetes, enfermedad renal, embarazo. La IA es un punto de partida sólido, no un reemplazo de tu criterio profesional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo editar los macros después de que la IA los calcula?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. En OneTrack, después del análisis con IA puedes editar manualmente cualquier valor: kcal, proteína, carbohidratos y grasa. La idea es que la IA te dé la base y tú ajustes según lo que conoces del cliente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuántos análisis de macros con IA puedo hacer al día?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Con el plan Unlimited de OneTrack tienes 2 análisis de macros con IA por día. Si necesitas más, puedes hacer los cálculos manuales directamente en la app. Los planes Free, Starter y Growth no incluyen análisis con IA."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La IA funciona para planes de dieta en cualquier estilo alimenticio (keto, vegano, etc.)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La IA calcula macros totales (kcal, proteína, carbos, grasa) basándose en los datos del cliente. No genera menús específicos por estilo alimenticio. Tú decides cómo distribuir esos macros en alimentos concretos según la preferencia del cliente. Lo que sí puedes hacer es ajustar manualmente la proporción de macros después del análisis para adaptarla a un enfoque bajo en carbos o alto en grasas."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:#070B16;color:#E8EAF0;font-family:'Inter',sans-serif;line-height:1.7}
+    nav{background:rgba(7,11,22,0.92);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1a2340}
+    nav a.logo{color:#fff;font-weight:700;font-size:1.2rem;text-decoration:none}
+    nav a.cta{background:#5B91F5;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:600}
+    main{max-width:800px;margin:0 auto;padding:48px 24px 80px}
+    h1{font-size:2rem;font-weight:800;color:#fff;line-height:1.2;margin-bottom:12px}
+    h2{font-size:1.4rem;font-weight:700;color:#fff;margin:40px 0 14px}
+    h3{font-size:1.1rem;font-weight:600;color:#c8d0e0;margin:28px 0 10px}
+    p{margin-bottom:18px;color:#c8d0e0}
+    ul,ol{margin:0 0 18px 24px;color:#c8d0e0}
+    li{margin-bottom:8px}
+    a{color:#5B91F5;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .meta{color:#6b7a99;font-size:.9rem;margin-bottom:40px}
+    .faq{margin-top:56px}
+    .faq-item{background:#0d1424;border:1px solid #1a2340;border-radius:12px;padding:24px;margin-bottom:16px}
+    .faq-item h3{color:#fff;margin:0 0 10px;font-size:1rem}
+    .faq-item p{margin:0;font-size:.95rem}
+    footer{border-top:1px solid #1a2340;padding:32px 24px;text-align:center;color:#6b7a99;font-size:.875rem}
+    footer a{color:#5B91F5}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="https://www.onetrack.lat" class="logo">OneTrack</a>
+    <a href="https://www.onetrack.lat" class="cta">Descargar app</a>
+  </nav>
+  <main>
+    <article>
+      <h1>Cómo usar inteligencia artificial para calcular macros de tus clientes automáticamente</h1>
+      <p class="meta">Publicado el 7 de junio de 2026</p>
+
+      <p>Calcular macros a mano está sobrevalorado. O más bien: está sobresufrido.</p>
+
+      <p>Ya sabes cómo va. Llega un cliente nuevo, le pides peso, altura, nivel de actividad, objetivo. Abres tu Excel o tu hoja de Google. Aplicas Harris-Benedict o Mifflin-St Jeor. Sacas el TDEE. Decides el déficit o superávit. Distribuyes proteína, carbos, grasa. Copias todo al plan. Y si tienes 10 clientes, repites eso 10 veces. Cada semana.</p>
+
+      <p>¿Funciona? Sí. ¿Es la mejor forma de usar tu tiempo? La neta, no.</p>
+
+      <p>Hoy la IA puede hacer ese cálculo en segundos. Y no hablo de ChatGPT genérico — hablo de herramientas diseñadas para coaches que ya están integradas en tu flujo de trabajo.</p>
+
+      <p>Te voy a explicar cómo funciona esto en la práctica, qué esperar, y dónde la IA todavía necesita que tú metas mano.</p>
+
+      <h2>El problema real: no es calcular, es recalcular</h2>
+
+      <p>Sacar los macros de un cliente nuevo toma unos 10-15 minutos si lo haces bien. No es eterno. El problema es que no lo haces una vez.</p>
+
+      <p>El cliente sube de peso. Baja. Cambia de objetivo. Le quieres subir proteína. Quiere dejar de cenar tanto carbo. Cada ajuste implica volver a abrir el Excel, recalcular y actualizar el plan.</p>
+
+      <p>Si manejas entre 10 y 20 clientes, estás gastando fácil 2-3 horas a la semana solo en eso. Horas que podrías usar para dar seguimiento real, revisar check-ins, o simplemente descansar.</p>
+
+      <p>Aquí el punto: la IA no te quita el trabajo de pensar. Te quita el trabajo mecánico de calcular.</p>
+
+      <h2>Cómo funciona el cálculo de macros con IA (paso a paso real)</h2>
+
+      <p>No todas las herramientas funcionan igual, pero el flujo general es este:</p>
+
+      <ol>
+        <li><strong>Ingresas los datos del cliente.</strong> Peso, altura, edad, sexo, nivel de actividad y objetivo (perder grasa, ganar músculo, mantenimiento).</li>
+        <li><strong>La IA calcula el TDEE</strong> usando las fórmulas estándar, pero combinando variables que a veces tú no cruzas manualmente — como la composición corporal si tienes datos de InBody u otra bioimpedancia.</li>
+        <li><strong>Te da una distribución de macros sugerida:</strong> kcal totales, gramos de proteína, carbohidratos y grasa.</li>
+        <li><strong>Tú revisas y ajustas.</strong> Porque conoces al cliente. Sabes que no tolera mucha grasa, o que entrena doble turno los martes, o que tiene resistencia a la insulina.</li>
+      </ol>
+
+      <p>Eso que en Excel te toma 15 minutos, con IA son literalmente 30 segundos. Un tap y ya tienes la base.</p>
+
+      <h3>Cómo se ve esto en OneTrack</h3>
+
+      <p>En <a href="https://www.onetrack.lat">OneTrack</a>, el análisis de macros con IA funciona así: abres el plan de dieta de tu cliente, tocas el botón de análisis con IA, y la app rellena automáticamente las kcal, proteína, carbos y grasa. Si algo no te convence, editas el valor ahí mismo.</p>
+
+      <p>Son 2 análisis con IA por día en el plan Unlimited ($49.99 USD/mes). Si necesitas más, puedes meter los datos manual — la app no te bloquea, solo el feature de IA tiene ese límite.</p>
+
+      <p>¿Es perfecto? No. Hay veces que la sugerencia de proteína me parece baja para un cliente que lleva un volumen de entrenamiento alto. Pero como punto de partida, ahorra un chorro de tiempo.</p>
+
+      <h2>Dónde la IA sí te rinde y dónde no tanto</h2>
+
+      <h3>Funciona bien para:</h3>
+
+      <ul>
+        <li><strong>Clientes nuevos sin condiciones especiales.</strong> Persona sana, quiere bajar grasa o ganar músculo. Datos claros. La IA te da algo muy usable de primera.</li>
+        <li><strong>Recalcular después de un check-in.</strong> El cliente bajó 2 kilos en un mes. En vez de volver al Excel, corres el análisis otra vez con el peso nuevo y ajustas.</li>
+        <li><strong>Escalar tu negocio.</strong> Si pasaste de 8 a 15 clientes, no puedes seguir haciendo todo manual. La IA te permite atender más gente sin que la calidad baje.</li>
+      </ul>
+
+      <h3>No funciona tan bien para:</h3>
+
+      <ul>
+        <li><strong>Casos clínicos.</strong> Diabetes tipo 1, enfermedad renal, trastornos alimenticios. Aquí necesitas criterio profesional que la IA no tiene.</li>
+        <li><strong>Atletas de alto rendimiento con periodización nutricional.</strong> Si tu cliente está en semana de carga vs semana de descarga, la IA no sabe eso. Tú sí.</li>
+        <li><strong>Preferencias alimenticias muy específicas.</strong> La IA calcula macros totales, no te arma un menú vegano keto. Eso sigue siendo tu chamba.</li>
+      </ul>
+
+      <p>Te lo digo de frente: la IA es un asistente, no un nutriólogo. Si la usas como base y le metes tu criterio encima, funciona increíble. Si esperas que haga todo sola, te vas a decepcionar.</p>
+
+      <h2>El combo que sí cambia las cosas: IA de macros + InBody AI</h2>
+
+      <p>Esto sí funciona bien cuando lo juntas.</p>
+
+      <p>Digamos que tu cliente se hace un InBody. Te manda el PDF por WhatsApp. En OneTrack subes ese PDF y la IA extrae automáticamente: peso, masa muscular, porcentaje de grasa, BMI. Además te da una recomendación personalizada que puedes usar como referencia para ajustar el plan.</p>
+
+      <p>Con esos datos frescos, corres el análisis de macros. Ahora la sugerencia es más precisa porque no está basada solo en peso y altura — tiene composición corporal real.</p>
+
+      <p>Un coach que conozco pasó de cobrar $1,500 MXN a $2,500 MXN por cliente solo porque empezó a incluir este tipo de análisis en su servicio. El cliente percibe más valor. Y al coach le toma 2 minutos lo que antes eran 20.</p>
+
+      <h2>Error común: automatizar y olvidarte</h2>
+
+      <p>Lo que nadie dice: muchos coaches empiezan a usar IA y dejan de revisar los números.</p>
+
+      <p>La IA te sugiere 1,800 kcal con 120g de proteína. Tú aceptas sin pensar. Dos semanas después el cliente no avanza. ¿Por qué? Porque 120g de proteína para alguien de 85 kg que entrena 5 veces a la semana es poco. Tú lo sabrías si hubieras revisado.</p>
+
+      <p>El flujo correcto es: la IA propone → tú revisas → ajustas si hace falta → le explicas al cliente por qué.</p>
+
+      <p>Si solo le das "aceptar" a todo, estás usando la IA mal. Y tu cliente lo va a notar.</p>
+
+      <h2>En la práctica: cómo integrar esto a tu semana</h2>
+
+      <p>Así se ve un flujo realista si tienes, digamos, 15 clientes:</p>
+
+      <ol>
+        <li><strong>Lunes:</strong> revisas los check-ins del fin de semana. Ves quién subió, quién bajó, quién se estancó.</li>
+        <li><strong>Para los que necesitan ajuste:</strong> abres su plan en OneTrack, corres el análisis de macros con IA, editas lo que veas raro, guardas.</li>
+        <li><strong>Para los que van bien:</strong> no tocas nada. Si funciona, no lo arregles.</li>
+        <li><strong>Si alguien te mandó su InBody:</strong> subes el PDF, extraes los datos con IA, y usas eso para el cálculo de macros.</li>
+      </ol>
+
+      <p>Todo eso te toma máximo 1 hora. Sin IA serían 3. Esa diferencia, con 15 clientes, es real.</p>
+
+      <h2>¿Y si no tengo el plan Unlimited?</h2>
+
+      <p>Si estás en el plan Free, Starter o Growth de OneTrack, no tienes acceso al análisis de macros con IA. Pero sí puedes crear planes de dieta y llenar los macros manualmente.</p>
+
+      <p>La neta, si tienes menos de 8 clientes, probablemente no necesitas la IA todavía. El cálculo manual es manejable. Donde sí se justifica el Unlimited es cuando pasas de 10-12 clientes y el tiempo se te empieza a ir en puro trabajo administrativo.</p>
+
+      <p>Haz la cuenta: si el plan Unlimited cuesta $49.99 USD/mes y te ahorra 2-3 horas a la semana, ¿cuánto vale tu hora? Si cobras $2,000 MXN por cliente y con ese tiempo extra puedes tomar 2 clientes más, la herramienta se paga sola el primer mes.</p>
+
+      <h2>Lo que viene (y lo que falta)</h2>
+
+      <p>La IA para nutrición todavía tiene camino por recorrer. Hoy calcula macros totales bien. Lo que todavía no hace (en ninguna plataforma, no solo OneTrack) es armar menús completos personalizados que consideren gustos, presupuesto, disponibilidad de alimentos en tu ciudad, y restricciones reales.</p>
+
+      <p>Eso llegará. Pero hoy, el valor real está en quitarte el trabajo repetitivo de calcular y recalcular. Y en eso, funciona.</p>
+
+      <div class="faq">
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-item">
+          <h3>¿Qué tan preciso es el cálculo de macros con IA comparado con hacerlo manual?</h3>
+          <p>En la mayoría de los casos la IA da resultados muy cercanos a lo que calcularías tú con fórmulas estándar (Harris-Benedict, Mifflin-St Jeor). La diferencia suele ser de 50-100 kcal. Donde sí necesitas meter mano es en casos clínicos especiales: diabetes, enfermedad renal, embarazo. La IA es un punto de partida sólido, no un reemplazo de tu criterio profesional.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Puedo editar los macros después de que la IA los calcula?</h3>
+          <p>Sí. En OneTrack, después del análisis con IA puedes editar manualmente cualquier valor: kcal, proteína, carbohidratos y grasa. La idea es que la IA te dé la base y tú ajustes según lo que conoces del cliente.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Cuántos análisis de macros con IA puedo hacer al día?</h3>
+          <p>Con el plan Unlimited de OneTrack tienes 2 análisis de macros con IA por día. Si necesitas más, puedes hacer los cálculos manuales directamente en la app. Los planes Free, Starter y Growth no incluyen análisis con IA.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿La IA funciona para planes de dieta en cualquier estilo alimenticio (keto, vegano, etc.)?</h3>
+          <p>La IA calcula macros totales (kcal, proteína, carbos, grasa) basándose en los datos del cliente. No genera menús específicos por estilo alimenticio. Tú decides cómo distribuir esos macros en alimentos concretos según la preferencia del cliente. Lo que sí puedes hacer es ajustar manualmente la proporción de macros después del análisis para adaptarla a un enfoque bajo en carbos o alto en grasas.</p>
+        </div>
+      </div>
+
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2026 <a href="https://www.onetrack.lat">OneTrack</a>. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
