@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Widget de rutina en iOS: cómo mejorar la experiencia de tus clientes con un solo toque | Blog OneTrack</title>
+  <meta name="description" content="Aprende cómo el widget de rutina en iOS ayuda a tus clientes a ver sus ejercicios del día sin abrir la app. Más adherencia, menos fricción.">
+  <link rel="canonical" href="https://www.onetrack.lat/blog/widget-rutina-ios-mejorar-experiencia-cliente.html">
+  <meta property="og:title" content="Widget de rutina en iOS: cómo mejorar la experiencia de tus clientes con un solo toque">
+  <meta property="og:description" content="Aprende cómo el widget de rutina en iOS ayuda a tus clientes a ver sus ejercicios del día sin abrir la app. Más adherencia, menos fricción.">
+  <meta property="og:url" content="https://www.onetrack.lat/blog/widget-rutina-ios-mejorar-experiencia-cliente.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="OneTrack">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Widget de rutina en iOS: cómo mejorar la experiencia de tus clientes con un solo toque">
+  <meta name="twitter:description" content="Aprende cómo el widget de rutina en iOS ayuda a tus clientes a ver sus ejercicios del día sin abrir la app. Más adherencia, menos fricción.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Widget de rutina en iOS: cómo mejorar la experiencia de tus clientes con un solo toque",
+    "author": {"@type": "Organization", "name": "OneTrack", "url": "https://www.onetrack.lat"},
+    "publisher": {
+      "@type": "Organization",
+      "name": "OneTrack",
+      "url": "https://www.onetrack.lat",
+      "logo": {"@type": "ImageObject", "url": "https://www.onetrack.lat/logo.png"}
+    },
+    "datePublished": "2026-06-08",
+    "dateModified": "2026-06-08",
+    "url": "https://www.onetrack.lat/blog/widget-rutina-ios-mejorar-experiencia-cliente.html",
+    "inLanguage": "es-MX",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.onetrack.lat/blog/widget-rutina-ios-mejorar-experiencia-cliente.html"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿El widget de rutina de OneTrack funciona en todos los iPhones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Funciona en cualquier iPhone con iOS 16 o superior. Si tu cliente tiene un modelo más viejo con iOS 15 o anterior, no va a poder agregar el widget. La app sigue funcionando normal, pero sin el widget en pantalla de inicio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿El widget gasta mucha batería?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Los widgets en iOS se actualizan en intervalos que controla el sistema, no están corriendo en tiempo real. El impacto en batería es mínimo, prácticamente imperceptible en el uso diario."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo personalizar qué información muestra el widget para cada cliente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El widget muestra automáticamente la rutina asignada para ese día. Tú como coach controlas qué ve el cliente porque tú armas la rutina. No hay una configuración extra del widget como tal, pero si cambias la rutina del día en OneTrack, el widget se actualiza."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Necesito el plan Unlimited para que mis clientes usen el widget?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. El widget de rutina está disponible en todos los planes, incluyendo el Free. Lo que cambia entre planes es el número de clientes que puedes manejar y el acceso a features de IA. El widget funciona igual para todos."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box }
+    body { background:#070B16; color:#E8EAF0; font-family:'Inter',sans-serif; line-height:1.7 }
+    nav { background:rgba(7,11,22,0.92); backdrop-filter:blur(12px); position:sticky; top:0;
+           z-index:100; padding:16px 24px; display:flex; justify-content:space-between;
+           align-items:center; border-bottom:1px solid #1a2340 }
+    nav a.logo { color:#fff; font-weight:700; font-size:1.2rem; text-decoration:none }
+    nav a.cta { background:#5B91F5; color:#fff; padding:8px 18px; border-radius:8px;
+                 text-decoration:none; font-size:.9rem; font-weight:600 }
+    main { max-width:800px; margin:0 auto; padding:48px 24px 80px }
+    h1 { font-size:2rem; font-weight:800; color:#fff; line-height:1.2; margin-bottom:12px }
+    h2 { font-size:1.4rem; font-weight:700; color:#fff; margin:40px 0 14px }
+    h3 { font-size:1.1rem; font-weight:600; color:#c8d0e0; margin:28px 0 10px }
+    p  { margin-bottom:18px; color:#c8d0e0 }
+    ul,ol { margin:0 0 18px 24px; color:#c8d0e0 }
+    li { margin-bottom:8px }
+    a  { color:#5B91F5; text-decoration:none }
+    a:hover { text-decoration:underline }
+    .meta { color:#6b7a99; font-size:.9rem; margin-bottom:40px }
+    .faq { margin-top:56px }
+    .faq-item { background:#0d1424; border:1px solid #1a2340; border-radius:12px;
+                 padding:24px; margin-bottom:16px }
+    .faq-item h3 { color:#fff; margin:0 0 10px; font-size:1rem }
+    .faq-item p { margin:0; font-size:.95rem }
+    footer { border-top:1px solid #1a2340; padding:32px 24px; text-align:center;
+              color:#6b7a99; font-size:.875rem }
+    footer a { color:#5B91F5 }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="https://www.onetrack.lat" class="logo">OneTrack</a>
+    <a href="https://www.onetrack.lat" class="cta">Descargar app</a>
+  </nav>
+  <main>
+    <article>
+      <h1>Widget de rutina en iOS: cómo mejorar la experiencia de tus clientes con un solo toque</h1>
+      <p class="meta">Publicado el 8 de junio de 2026</p>
+
+      <p>Tu cliente se despierta. Agarra el teléfono. Ve la pantalla de inicio y ahí, sin abrir nada, ya sabe qué le toca entrenar hoy.</p>
+
+      <p>Eso es un widget de rutina. Y la neta, cambia más de lo que parece.</p>
+
+      <p>No es una feature llamativa ni algo que ponga en un anuncio de Instagram. Pero en la práctica, es la diferencia entre un cliente que abre la app para ver su rutina y uno que ni se acuerda dónde la dejó.</p>
+
+      <h2>El problema real: la fricción mata la adherencia</h2>
+
+      <p>Cada paso extra que tu cliente tiene que dar para llegar a su rutina es una oportunidad de que se distraiga. Abrir la app, buscar el día, scrollear hasta encontrar los ejercicios… suena a nada. Son 15 segundos.</p>
+
+      <p>Pero esos 15 segundos compiten contra Instagram, WhatsApp, TikTok y las 87 notificaciones que llegaron en la noche. Y pierden.</p>
+
+      <p>El widget elimina esa fricción. La rutina del día está ahí, visible, antes de que el cliente haga cualquier otra cosa. Sin abrir nada. Sin buscar nada.</p>
+
+      <p>Aquí el punto: no es que el widget haga que alguien entrene. Pero sí reduce las excusas pasivas. Esas de "se me olvidó revisar" o "no encontré la rutina".</p>
+
+      <h2>Cómo funciona el widget en OneTrack</h2>
+
+      <p>El widget de <a href="https://apps.apple.com/mx/app/onetrack/id6761740866">OneTrack</a> muestra los ejercicios asignados para el día actual. Series, repeticiones, nombre del ejercicio. Lo que el cliente necesita saber antes de llegar al gym.</p>
+
+      <p>Funciona así:</p>
+
+      <ol>
+        <li>Tú como coach asignas la rutina por día dentro de la app.</li>
+        <li>Tu cliente agrega el widget de OneTrack a su pantalla de inicio (como cualquier otro widget de iOS).</li>
+        <li>El widget muestra automáticamente la rutina correspondiente al día.</li>
+      </ol>
+
+      <p>Si hoy es martes y le toca espalda y bíceps, eso es lo que ve. Sin taps, sin login, sin nada.</p>
+
+      <p>Al tocar el widget, se abre directo en la rutina completa dentro de la app. Un toque y ya está dentro del detalle de cada ejercicio.</p>
+
+      <h2>Lo que nadie dice sobre los widgets</h2>
+
+      <p>Voy a ser directo: un widget no va a salvar a un cliente que ya dejó de entrenar hace 3 semanas. No es magia.</p>
+
+      <p>Donde sí funciona es con clientes que están activos pero medio flojos con la organización. Los que llegan al gym y te mandan mensaje preguntando "¿qué me tocaba hoy?". Esos.</p>
+
+      <p>También tiene limitaciones técnicas. iOS controla cuándo se refresca el widget. No es en tiempo real. Si cambias la rutina 5 minutos antes de que el cliente entre al gym, puede que el widget todavía muestre la anterior hasta que iOS lo actualice. En la práctica esto rara vez pasa si asignas rutinas con anticipación, pero hay que saberlo.</p>
+
+      <p>Otro detalle: el widget solo muestra la rutina. No muestra la dieta, no muestra el check-in semanal, no muestra métricas. Es solo los ejercicios del día. Enfocado y simple.</p>
+
+      <h2>El impacto en tu servicio como coach</h2>
+
+      <h3>Menos mensajes preguntando la rutina</h3>
+
+      <p>Si manejas 15 clientes y 4 o 5 te escriben cada día preguntando qué les toca, eso son 20-25 mensajes a la semana que no necesitas contestar. Suena menor. Pero multiplicado por las semanas del mes, son fácil 2 horas que recuperas.</p>
+
+      <p>Con el widget activo, esos mensajes bajan. No desaparecen por completo —siempre va a haber quien prefiera preguntar— pero bajan notablemente.</p>
+
+      <h3>Percepción de servicio profesional</h3>
+
+      <p>Esto sí funciona a nivel percepción. Cuando un cliente ve su rutina en la pantalla de inicio de su iPhone, junto a Spotify y el clima, siente que tu servicio está integrado en su vida. No es algo que tiene que ir a buscar. Está ahí.</p>
+
+      <p>Un coach que conozco pasó de 8 a 18 clientes en unos meses. No fue solo por el widget, obvio. Pero cuando le pregunté qué cambió, dijo que la experiencia del cliente mejoró en general. "Les mandé un video de 30 segundos enseñándoles a poner el widget y dejaron de perder tiempo buscando su rutina." Así de simple.</p>
+
+      <p>Si cobras $2,000 MXN por cliente al mes, ese tipo de detalle justifica el precio. Tu cliente siente que el servicio va más allá de un PDF.</p>
+
+      <h3>Refuerzo visual diario</h3>
+
+      <p>Cada vez que tu cliente desbloquea el teléfono —y eso pasa unas 80-100 veces al día según los datos de Apple— ve tu rutina. Es un recordatorio pasivo constante.</p>
+
+      <p>No es un push notification que se puede ignorar o silenciar. Es información estática en la pantalla principal. Sutil pero persistente.</p>
+
+      <h2>Cómo pedirle a tus clientes que activen el widget</h2>
+
+      <p>La neta, la mayoría de tus clientes no van a descubrir el widget solos. Tienes que decirles que existe y cómo ponerlo.</p>
+
+      <p>Esto funciona mejor que cualquier tutorial largo:</p>
+
+      <ul>
+        <li>Mándales un mensaje de WhatsApp cuando les asignes su primera rutina en OneTrack.</li>
+        <li>Diles: "Mantén presionado en tu pantalla de inicio, toca el +, busca OneTrack y agrega el widget de rutina."</li>
+        <li>Si puedes, graba un screen recording de 20 segundos haciéndolo tú. Eso es suficiente.</li>
+      </ul>
+
+      <p>No asumas que saben cómo agregar widgets. Muchos nunca lo han hecho. Una instrucción de 2 líneas resuelve.</p>
+
+      <h2>Widget + rutinas por día = la combinación que funciona</h2>
+
+      <p>El widget solo tiene sentido si asignas rutinas por día. Si le das a tu cliente una lista genérica de ejercicios sin organizar por día, el widget no puede mostrar nada útil.</p>
+
+      <p>En OneTrack puedes crear la rutina y asignar qué ejercicios van cada día de la semana. Lunes pecho, martes pierna, miércoles descanso, jueves espalda… tú decides. El widget lee esa estructura y muestra lo que corresponde.</p>
+
+      <p>Si usas plantillas de rutina —que en OneTrack puedes reutilizar entre clientes— esto se vuelve todavía más rápido. Creas la plantilla una vez, se la asignas a 5 clientes con variaciones menores, y los 5 tienen su widget funcionando.</p>
+
+      <p>Acción concreta: revisa que todas las rutinas de tus clientes activos tengan ejercicios asignados por día. Si alguno tiene todo en un solo bloque, sepáralo. Es lo que hace que el widget funcione bien.</p>
+
+      <h2>¿Y si el cliente no usa iPhone?</h2>
+
+      <p>Te lo digo de frente: ahorita el widget solo está en iOS. OneTrack es una app de iOS. Si tu cliente usa Android, no tiene widget.</p>
+
+      <p>En LATAM y específicamente en México, la base de iPhone es grande en cierto perfil socioeconómico —que muchas veces coincide con quien puede pagar un coach—, pero no es universal. Si tienes clientes con Android, la rutina sigue accesible dentro de la app (cuando llegue la versión Android), pero el widget como tal es feature de iOS.</p>
+
+      <p>No es ideal. Pero es la realidad de la plataforma hoy.</p>
+
+      <h2>Combinándolo con el resto del sistema</h2>
+
+      <p>El widget no vive solo. Funciona mejor cuando está dentro de un flujo completo:</p>
+
+      <ul>
+        <li><strong>Rutina asignada por día</strong> → el widget muestra los ejercicios.</li>
+        <li><strong>Plan de dieta con macros</strong> → el cliente abre la app y ve qué comer.</li>
+        <li><strong>Check-in semanal</strong> → fotos + peso para que tú ajustes.</li>
+        <li><strong>Dashboard de adherencia</strong> → tú ves quién sigue el plan y quién no.</li>
+      </ul>
+
+      <p>El widget es la puerta de entrada. El primer contacto diario del cliente con su plan. De ahí, si necesita más detalle, abre la app y tiene todo.</p>
+
+      <p>Un coach que usa OneTrack con 14 clientes me dijo que desde que les pidió activar el widget, las consultas de "¿qué me toca hoy?" bajaron a casi cero. Eso le libera tiempo para enfocarse en ajustar planes y hacer seguimiento real, no en repetir información que ya está asignada.</p>
+
+      <h2>Resumen práctico</h2>
+
+      <p>Si ya usas OneTrack y no le has pedido a tus clientes que activen el widget, estás dejando valor en la mesa. No toma más de 2 minutos por cliente configurarlo.</p>
+
+      <p>Pasos inmediatos:</p>
+
+      <ol>
+        <li>Verifica que cada cliente tenga rutina asignada por día.</li>
+        <li>Manda un mensaje a tus clientes activos pidiéndoles que agreguen el widget.</li>
+        <li>Incluye instrucciones breves o un screen recording.</li>
+        <li>Observa en tu dashboard de adherencia si hay cambio en las próximas 2 semanas.</li>
+      </ol>
+
+      <p>Es una de esas cosas que se configura una vez y trabaja sola todos los días. Sin intervención tuya. Sin costo extra. Sin complicaciones.</p>
+
+      <div class="faq">
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-item">
+          <h3>¿El widget de rutina de OneTrack funciona en todos los iPhones?</h3>
+          <p>Funciona en cualquier iPhone con iOS 16 o superior. Si tu cliente tiene un modelo más viejo con iOS 15 o anterior, no va a poder agregar el widget. La app sigue funcionando normal, pero sin el widget en pantalla de inicio.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿El widget gasta mucha batería?</h3>
+          <p>No. Los widgets en iOS se actualizan en intervalos que controla el sistema, no están corriendo en tiempo real. El impacto en batería es mínimo, prácticamente imperceptible en el uso diario.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Puedo personalizar qué información muestra el widget para cada cliente?</h3>
+          <p>El widget muestra automáticamente la rutina asignada para ese día. Tú como coach controlas qué ve el cliente porque tú armas la rutina. No hay una configuración extra del widget como tal, pero si cambias la rutina del día en OneTrack, el widget se actualiza.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Necesito el plan Unlimited para que mis clientes usen el widget?</h3>
+          <p>No. El widget de rutina está disponible en todos los planes, incluyendo el Free. Lo que cambia entre planes es el número de clientes que puedes manejar y el acceso a features de IA. El widget funciona igual para todos.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2026 <a href="https://www.onetrack.lat">OneTrack</a>. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
