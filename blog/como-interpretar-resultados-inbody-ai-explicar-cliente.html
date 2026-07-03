@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo interpretar los resultados de un análisis InBody con IA y explicárselos a tu cliente | Blog OneTrack</title>
+  <meta name="description" content="Aprende a leer un InBody, identificar lo que de verdad importa y explicárselo a tu cliente sin que se pierda. Con IA el proceso se simplifica mucho.">
+  <link rel="canonical" href="https://www.onetrack.lat/blog/como-interpretar-resultados-inbody-ai-explicar-cliente.html">
+  <meta property="og:title" content="Cómo interpretar los resultados de un análisis InBody con IA y explicárselos a tu cliente">
+  <meta property="og:description" content="Aprende a leer un InBody, identificar lo que de verdad importa y explicárselo a tu cliente sin que se pierda. Con IA el proceso se simplifica mucho.">
+  <meta property="og:url" content="https://www.onetrack.lat/blog/como-interpretar-resultados-inbody-ai-explicar-cliente.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="OneTrack">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cómo interpretar los resultados de un análisis InBody con IA y explicárselos a tu cliente">
+  <meta name="twitter:description" content="Aprende a leer un InBody, identificar lo que de verdad importa y explicárselo a tu cliente sin que se pierda. Con IA el proceso se simplifica mucho.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cómo interpretar los resultados de un análisis InBody con IA y explicárselos a tu cliente",
+    "author": {"@type": "Organization", "name": "OneTrack", "url": "https://www.onetrack.lat"},
+    "publisher": {
+      "@type": "Organization",
+      "name": "OneTrack",
+      "url": "https://www.onetrack.lat",
+      "logo": {"@type": "ImageObject", "url": "https://www.onetrack.lat/logo.png"}
+    },
+    "datePublished": "2026-07-03",
+    "dateModified": "2026-07-03",
+    "url": "https://www.onetrack.lat/blog/como-interpretar-resultados-inbody-ai-explicar-cliente.html",
+    "inLanguage": "es-MX",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.onetrack.lat/blog/como-interpretar-resultados-inbody-ai-explicar-cliente.html"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué tan preciso es el InBody comparado con un DEXA scan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El InBody usa bioimpedancia y tiene un margen de error de 2-3% en grasa corporal vs. DEXA. Para seguimiento mensual de un cliente promedio, es más que suficiente. Donde flaquea es en personas con mucha retención de líquidos o deshidratación, porque la impedancia se altera. Mide siempre en condiciones similares: misma hora, en ayunas, sin entrenar antes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cada cuánto debería hacerle un InBody a mi cliente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cada 4 a 6 semanas es el sweet spot. Menos de 4 semanas y los cambios reales se confunden con variaciones de agua. Más de 6 semanas y pierdes oportunidad de ajustar a tiempo. Si tu cliente está en un déficit agresivo, cada 4 semanas. Si está en mantenimiento o ganancia lenta, cada 6."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿InBody AI de OneTrack funciona con cualquier modelo de InBody?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Funciona con los PDFs que generan los modelos más comunes en gimnasios de México: InBody 270, 370S y 570. Si tu gimnasio tiene un modelo muy viejo o genera un formato de hoja diferente, la IA puede no extraer todos los campos. En ese caso puedes capturar los datos manualmente en la app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo usar la función InBody AI con el plan Free o Starter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. InBody AI está disponible solo en el plan Unlimited ($49.99 USD/mes). Los planes Free, Starter y Growth permiten capturar datos de composición corporal manualmente, pero no incluyen el análisis automático por IA ni la recomendación personalizada."
+        }
+      }
+    ]
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:#070B16;color:#E8EAF0;font-family:'Inter',sans-serif;line-height:1.7}
+    nav{background:rgba(7,11,22,0.92);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1a2340}
+    nav a.logo{color:#fff;font-weight:700;font-size:1.2rem;text-decoration:none}
+    nav a.cta{background:#5B91F5;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:600}
+    main{max-width:800px;margin:0 auto;padding:48px 24px 80px}
+    h1{font-size:2rem;font-weight:800;color:#fff;line-height:1.2;margin-bottom:12px}
+    h2{font-size:1.4rem;font-weight:700;color:#fff;margin:40px 0 14px}
+    h3{font-size:1.1rem;font-weight:600;color:#c8d0e0;margin:28px 0 10px}
+    p{margin-bottom:18px;color:#c8d0e0}
+    ul,ol{margin:0 0 18px 24px;color:#c8d0e0}
+    li{margin-bottom:8px}
+    a{color:#5B91F5;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .meta{color:#6b7a99;font-size:.9rem;margin-bottom:40px}
+    .faq{margin-top:56px}
+    .faq-item{background:#0d1424;border:1px solid #1a2340;border-radius:12px;padding:24px;margin-bottom:16px}
+    .faq-item h3{color:#fff;margin:0 0 10px;font-size:1rem}
+    .faq-item p{margin:0;font-size:.95rem}
+    footer{border-top:1px solid #1a2340;padding:32px 24px;text-align:center;color:#6b7a99;font-size:.875rem}
+    footer a{color:#5B91F5}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="https://www.onetrack.lat" class="logo">OneTrack</a>
+    <a href="https://www.onetrack.lat" class="cta">Descargar app</a>
+  </nav>
+  <main>
+    <article>
+      <h1>Cómo interpretar los resultados de un análisis InBody con IA y explicárselos a tu cliente</h1>
+      <p class="meta">Publicado el 3 de julio de 2026</p>
+
+      <p>Tu cliente se acaba de hacer un InBody. Te manda la foto de la hoja o el PDF por WhatsApp. Tú ves 30 números, barras de colores y un montón de texto. Tu cliente ve… nada. Solo quiere saber si va bien o va mal.</p>
+
+      <p>Aquí el punto: el InBody es una herramienta brutal para medir progreso real. Pero si no sabes qué números importan y cuáles ignorar, terminas confundiendo a tu cliente en lugar de motivarlo. Y peor: si le explicas todo de golpe, se satura y deja de ponerle atención.</p>
+
+      <p>Este artículo es para que sepas exactamente qué mirar, qué decirle a tu cliente y cómo usar IA para ahorrarte el trabajo de capturar datos a mano.</p>
+
+      <h2>El InBody tiene 30+ datos. Solo necesitas 5.</h2>
+
+      <p>La neta, la mayoría de los números del InBody son para investigadores o médicos. Para coaching de composición corporal, estos son los que mueven la aguja:</p>
+
+      <ul>
+        <li><strong>Peso total (kg)</strong> — el punto de partida, pero solo eso. Nunca lo uses como métrica única de progreso.</li>
+        <li><strong>Masa muscular esquelética (SMM)</strong> — cuánto músculo tiene tu cliente. Lo que quieres que suba (o al menos se mantenga en déficit).</li>
+        <li><strong>Masa grasa corporal (BFM)</strong> — la grasa total en kg. Lo que quieres que baje en la mayoría de los casos.</li>
+        <li><strong>Porcentaje de grasa corporal (%BF)</strong> — la relación entre grasa y peso total. El número que más le importa al cliente aunque no lo sepa.</li>
+        <li><strong>IMC o BMI</strong> — útil como referencia general, pero no te cases con él. Un cliente musculoso va a salir con IMC "alto" y eso no significa nada malo.</li>
+      </ul>
+
+      <p>Los demás datos — agua intracelular, impedancia segmentaria, minerales óseos — son interesantes si eres fisioterapeuta o si tu cliente tiene una condición médica específica. Para el 90% de tus clientes de coaching, con los 5 de arriba estás.</p>
+
+      <h2>Lo que nadie dice: el peso puede subir y tu cliente puede estar mejorando</h2>
+
+      <p>Esta conversación pasa todo el tiempo. El cliente sube 1.2 kg en un mes y entra en pánico. Pero si ves el InBody, resulta que ganó 1.8 kg de músculo y perdió 0.6 kg de grasa. El resultado neto en la báscula es +1.2, pero la composición corporal mejoró muchísimo.</p>
+
+      <p>Si no tienes el InBody, no puedes tener esta conversación con datos. Y si solo le dices "confía en el proceso", no es suficiente. Tu cliente necesita ver los números.</p>
+
+      <p>Esto funciona así: tú comparas el InBody actual con el anterior. Le muestras la diferencia en músculo y la diferencia en grasa por separado. Eso cambia completamente la narrativa.</p>
+
+      <h2>Cómo explicarle los resultados sin que se pierda</h2>
+
+      <p>No le muestres la hoja entera. No le digas "mira, tu agua extracelular está en 0.382". Le da igual.</p>
+
+      <h3>Paso 1: Empieza por lo positivo (si lo hay)</h3>
+      <p>Busca el dato que más mejoró. ¿Subió músculo? Empieza por ahí. ¿Bajó grasa? Abre con eso. Si ambos mejoraron, genial. Si ninguno mejoró, sé directo pero no dramático.</p>
+
+      <h3>Paso 2: Usa comparaciones simples</h3>
+      <p>En vez de decir "tu masa muscular esquelética pasó de 28.3 a 29.1 kg", dile: "ganaste casi un kilo de músculo puro en un mes. Eso es muy buen ritmo." Dale contexto. Que sepa si va rápido, lento o normal.</p>
+
+      <h3>Paso 3: Conecta el resultado con lo que hizo (o no hizo)</h3>
+      <p>"Subiste músculo porque le metiste consistencia al gym 4 veces por semana. La proteína también estuvo arriba de 120g casi todos los días." O al revés: "La grasa no bajó porque hubo 3 semanas donde los carbos se fueron por arriba de lo planeado. Lo vemos en la adherencia."</p>
+
+      <p>Eso es coaching de verdad. No es solo leer números, es conectar causa y efecto.</p>
+
+      <h3>Paso 4: Define una acción concreta para el próximo mes</h3>
+      <p>No le digas "hay que mejorar". Dile qué va a cambiar: "Vamos a bajar 200 kcal los días de descanso y subir una serie en cada ejercicio compuesto." Algo que pueda ejecutar.</p>
+
+      <h2>InBody AI: cómo la IA te quita la parte tediosa</h2>
+
+      <p>Capturar los datos del InBody a mano es un dolor. Tienes que leer el PDF, buscar los 5 números, anotarlos en tu Excel o app, y luego pensar qué ajustar. Con 10 o 15 clientes, eso son 2-3 horas al mes fácil.</p>
+
+      <p>En <a href="https://www.onetrack.lat">OneTrack</a>, la función InBody AI (disponible en el plan Unlimited) funciona así: subes el PDF del InBody, la IA extrae automáticamente peso, masa muscular, masa grasa y BMI, y te genera una recomendación personalizada para ese cliente. Todo en menos de un minuto.</p>
+
+      <p>Te lo digo de frente: no es perfecto. Si el PDF está muy borroso, escaneado chueco o es de un modelo de InBody muy viejo, a veces la IA no extrae todos los campos. En ese caso te toca meter los datos a mano. Pero con los PDFs digitales que generan los InBody modernos (270, 370S, 570), funciona bien el 85-90% de las veces.</p>
+
+      <p>Lo que sí aporta mucho es la recomendación. La IA analiza los datos en contexto del perfil del cliente y te sugiere ajustes. No reemplaza tu criterio — tú decides si aplicas la sugerencia o no — pero te da un punto de partida para la conversación con tu cliente.</p>
+
+      <h2>Errores comunes al interpretar un InBody</h2>
+
+      <p>Estos los veo seguido y te pueden hacer quedar mal con tu cliente:</p>
+
+      <ul>
+        <li><strong>Comparar InBodies tomados en condiciones diferentes.</strong> Un InBody en ayunas a las 7am vs. uno después de comer a las 4pm van a dar resultados distintos solo por el agua y la comida. Siempre pide que se lo haga en las mismas condiciones.</li>
+        <li><strong>Obsesionarte con el porcentaje de grasa exacto.</strong> El InBody tiene un margen de error de 2-3%. Si tu cliente pasó de 22.1% a 21.8%, eso NO es un cambio real. Necesitas ver diferencias de al menos 1-1.5 puntos para decir que hubo progreso legítimo.</li>
+        <li><strong>Ignorar el análisis segmentario.</strong> Si tu cliente tiene un desbalance muscular entre piernas (diferencia mayor a 1-2 kg), eso sí vale la pena mencionarlo y ajustar la rutina. Muchos coaches se saltan esta parte.</li>
+        <li><strong>Usar el InBody como arma.</strong> Si los resultados no son buenos, no lo uses para regañar. Úsalo para ajustar. El cliente ya sabe que no le fue bien. Tu trabajo es decirle qué hacer diferente.</li>
+      </ul>
+
+      <h2>Cómo integrar el InBody en tu flujo de seguimiento</h2>
+
+      <p>Esto sí funciona: haz el InBody cada 4-6 semanas y combínalo con los check-ins semanales de fotos y peso. El peso semanal te da la tendencia, las fotos te dan la percepción visual y el InBody te da la composición real. Las tres cosas juntas cuentan la historia completa.</p>
+
+      <p>En OneTrack puedes llevar los check-ins semanales con fotos y gráfica de peso, y sumar el InBody AI cada que tu cliente se mida. Todo queda en el mismo lugar, no tienes que andar cruzando datos entre Excel, WhatsApp y Google Drive.</p>
+
+      <p>Un coach en Monterrey pasó de tener los datos en 4 lugares diferentes a tenerlos todos en la app. Dice que ahorra unas 2 horas a la semana entre captura de datos y seguimiento. Con 18 clientes, eso se nota.</p>
+
+      <h2>El InBody no es magia — es una foto</h2>
+
+      <p>El InBody te da una foto de un momento. No te dice si tu cliente va a seguir mejorando o si va a estancarse. Para eso necesitas el contexto: ¿está siguiendo la dieta? ¿Está entrenando con la intensidad correcta? ¿Está durmiendo bien?</p>
+
+      <p>Un InBody sin seguimiento no sirve de mucho. Y un seguimiento sin datos objetivos tampoco. La combinación de ambos es donde está el valor real que le das a tu cliente.</p>
+
+      <p>Si cobras entre $1,500 y $3,000 MXN por cliente al mes, darle un reporte con datos reales de composición corporal, explicado en 5 minutos de forma clara, justifica tu precio. Es la diferencia entre un coach que "da rutinas" y uno que da resultados medibles.</p>
+
+      <div class="faq">
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-item">
+          <h3>¿Qué tan preciso es el InBody comparado con un DEXA scan?</h3>
+          <p>El InBody usa bioimpedancia y tiene un margen de error de 2-3% en grasa corporal vs. DEXA. Para seguimiento mensual de un cliente promedio, es más que suficiente. Donde flaquea es en personas con mucha retención de líquidos o deshidratación, porque la impedancia se altera. Mide siempre en condiciones similares: misma hora, en ayunas, sin entrenar antes.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Cada cuánto debería hacerle un InBody a mi cliente?</h3>
+          <p>Cada 4 a 6 semanas es el sweet spot. Menos de 4 semanas y los cambios reales se confunden con variaciones de agua. Más de 6 semanas y pierdes oportunidad de ajustar a tiempo. Si tu cliente está en un déficit agresivo, cada 4 semanas. Si está en mantenimiento o ganancia lenta, cada 6.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿InBody AI de OneTrack funciona con cualquier modelo de InBody?</h3>
+          <p>Funciona con los PDFs que generan los modelos más comunes en gimnasios de México: InBody 270, 370S y 570. Si tu gimnasio tiene un modelo muy viejo o genera un formato de hoja diferente, la IA puede no extraer todos los campos. En ese caso puedes capturar los datos manualmente en la app.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Puedo usar la función InBody AI con el plan Free o Starter?</h3>
+          <p>No. InBody AI está disponible solo en el plan Unlimited ($49.99 USD/mes). Los planes Free, Starter y Growth permiten capturar datos de composición corporal manualmente, pero no incluyen el análisis automático por IA ni la recomendación personalizada.</p>
+        </div>
+      </div>
+
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2026 <a href="https://www.onetrack.lat">OneTrack</a>. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
