@@ -296,8 +296,29 @@
   html,body{margin:0;padding:0;color:var(--text);font-family:'Inter','SF Pro Display',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"ss01","cv11"}
   /* Document-height gradient: dark navy (top) → deep blue → soft light blue (bottom),
      so scrolling down travels from the app's dark mode toward its light mode. */
+  /* Stops recorridos ~22% para compensar los 360vh extra de scroll del hero
+     animado (zona oscura sostenida mientras el teléfono está pinned). */
   body{
     overflow-x:hidden;
+    background:
+      radial-gradient(1100px 620px at 50% -160px, rgba(91,145,245,0.16), transparent 60%),
+      linear-gradient(180deg,
+        #070B16 0%,
+        #070B16 22%,
+        #08101F 31%,
+        #0B1A33 42%,
+        #102544 52%,
+        #173258 61%,
+        #21436F 69%,
+        #335C95 77%,
+        #5A82BE 84%,
+        #9DBCE6 91%,
+        #D6E5F8 97%,
+        #E9F1FB 100%);
+    background-attachment:scroll;
+  }
+  /* Sin animación (móvil / reduced-motion / sin GSAP): gradiente original */
+  body.no-anim{
     background:
       radial-gradient(1100px 620px at 50% -160px, rgba(91,145,245,0.16), transparent 60%),
       linear-gradient(180deg,
@@ -312,7 +333,6 @@
         #9DBCE6 89%,
         #D6E5F8 96%,
         #E9F1FB 100%);
-    background-attachment:scroll;
   }
   a{color:inherit;text-decoration:none}
   button{font-family:inherit}
@@ -1423,6 +1443,35 @@
   .nf p{font-size:13px;line-height:1.55;color:var(--text-dim);margin:0;text-wrap:pretty}
   .nf p b{color:#B8CEFF;font-weight:600}
 
+  /* ============ HERO SPOTLIGHT (animación de scroll, GSAP) ============ */
+  .phone-stage{perspective:1500px}
+  .phone{transform-style:preserve-3d;will-change:transform}
+  /* el gradiente de la pantalla vive en su propia capa para poder atenuarlo */
+  .screen{background:none}
+  .screen-bg{position:absolute;inset:0;border-radius:44px;z-index:0;
+    background:linear-gradient(180deg,#1B2F54 0%, #132748 38%, #0B1830 100%);will-change:opacity}
+  .screen>*:not(.screen-bg){position:relative;z-index:1}
+  .layer{will-change:transform,opacity;backface-visibility:hidden}
+  .float-ring{will-change:transform,opacity}
+  /* callouts del spotlight */
+  .tag{position:absolute;z-index:8;opacity:0;will-change:opacity;pointer-events:none}
+  .tag .lab{display:inline-flex;align-items:center;gap:8px;background:rgba(12,18,34,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border:1px solid var(--line-strong);border-radius:100px;padding:9px 15px;font-size:12.5px;font-weight:500;color:var(--text);
+    white-space:nowrap;box-shadow:0 20px 40px -20px rgba(0,0,0,0.8)}
+  .tag .lab .pt{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 9px var(--accent-glow)}
+  .tag .cn{position:absolute;opacity:.6}
+  .tag .cn::after{content:'';position:absolute;width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 9px var(--accent-glow)}
+  .tag.side-l .cn{left:100%;top:50%;margin-left:5px;height:1px;width:44px;background:linear-gradient(90deg,var(--accent),transparent)}
+  .tag.side-l .cn::after{right:-3px;top:-2px}
+  .tag.side-r .cn{right:100%;top:50%;margin-right:5px;height:1px;width:44px;background:linear-gradient(270deg,var(--accent),transparent)}
+  .tag.side-r .cn::after{left:-3px;top:-2px}
+  .scroll-hint{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:5;
+    font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--text-mute);text-transform:uppercase;
+    display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scroll-hint .line{width:1px;height:32px;background:linear-gradient(var(--text-mute),transparent)}
+  /* fallback: móvil / prefers-reduced-motion / sin GSAP → hero estático de siempre */
+  .no-anim .tag,.no-anim .scroll-hint{display:none}
+  .no-anim #heroSpacer{display:none!important}
 </style>
 </head>
 <body>
@@ -1453,7 +1502,7 @@
   <div class="hero-glow"></div>
   <div class="hero-grain"></div>
   <div class="wrap hero-grid">
-    <div>
+    <div id="heroCopy">
       <div class="eyebrow">
         <span class="dot"></span>
         ✨ Nuevo en v1.3 — rediseño completo, modo claro/oscuro y Haptic Touch
@@ -1501,9 +1550,11 @@
     </div>
 
     <!-- APP MOCKUP (recreación CSS del diseño de la app) -->
-    <div class="phone-stage">
-      <div class="phone phone-front">
-        <div class="screen">
+    <div class="phone-stage" id="phoneStage">
+      <div class="phone phone-front" id="phone">
+        <div class="notch" id="notch"></div>
+        <div class="screen" id="screen">
+          <div class="screen-bg" id="screenBg"></div>
           <div class="sb">
             <span>1:11</span>
             <span class="r">
@@ -1512,6 +1563,7 @@
               <svg viewBox="0 0 25 12" width="23" fill="none"><rect x="1" y="2" width="20" height="8" rx="2.2" stroke="#fff" stroke-opacity=".5"/><rect x="2.6" y="3.6" width="15" height="4.8" rx="1.2" fill="#fff"/><path d="M22.5 5v2" stroke="#fff" stroke-opacity=".5" stroke-linecap="round"/></svg>
             </span>
           </div>
+          <div class="layer" data-layer="head">
           <div class="d-top">
             <span class="d-logo">T</span>
             <span class="d-actions">
@@ -1521,6 +1573,8 @@
           </div>
           <div class="d-hi">Hola, Pancho</div>
           <div class="d-subt">8 clientes · 3 necesitan atención</div>
+          </div>
+          <div class="layer" data-layer="search">
           <div class="d-search">
             <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
             Buscar cliente
@@ -1530,6 +1584,8 @@
             <span class="p">Hombres</span>
             <span class="p">Mujeres</span>
           </div>
+          </div>
+          <div class="layer" data-layer="stats">
           <div class="d-stats">
             <div class="d-stat">
               <div class="h"><span class="dot g"></span> Al día</div>
@@ -1547,6 +1603,8 @@
             <div class="d-bann-t"><b>Plan Starter al límite</b><span>8 de 8 clientes</span></div>
             <span class="d-up">Mejorar</span>
           </div>
+          </div>
+          <div class="layer" data-layer="list">
           <div class="d-list">
             <div class="d-row">
               <span class="d-av">MC</span>
@@ -1573,15 +1631,25 @@
               <span class="ch"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
             </div>
           </div>
+          </div>
         </div>
       </div>
-      <div class="float-ring">
+      <div class="float-ring" id="floatRing">
         <div class="ring-el"><span class="t">6/9<small>SERIES</small></span></div>
         <div class="lab"><b>Entreno de hoy</b><span>Pecho y espalda</span></div>
       </div>
+      <!-- callouts del spotlight (posicionados por JS junto a su capa) -->
+      <div class="tags3d" id="tagsWrap" style="position:absolute;inset:0;pointer-events:none;z-index:8">
+        <div class="tag side-r" data-tag="head"><span class="lab"><span class="pt"></span>Tu día como coach, en un vistazo</span><span class="cn"></span></div>
+        <div class="tag side-l" data-tag="search"><span class="lab"><span class="pt"></span>Encuentra a cualquier cliente al instante</span><span class="cn"></span></div>
+        <div class="tag side-r" data-tag="stats"><span class="lab"><span class="pt"></span>Quién está al día y quién necesita atención</span><span class="cn"></span></div>
+        <div class="tag side-l" data-tag="list"><span class="lab"><span class="pt"></span>Peso, tendencia y último check-in de cada cliente</span><span class="cn"></span></div>
+      </div>
     </div>
   </div>
+  <div class="scroll-hint" id="scrollHint"><span>Scroll</span><span class="line"></span></div>
 </header>
+<div id="heroSpacer" style="height:360vh"></div>
 
 <!-- ============ PROOF ============ -->
 <section class="proof">
@@ -2337,5 +2405,125 @@
   </div>
 </footer>
 
+<!-- ============ HERO SPOTLIGHT (GSAP) ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var isMobile = window.matchMedia && window.matchMedia('(max-width:960px)').matches;
+  var hasGSAP = typeof window.gsap !== 'undefined';
+
+  if(!hasGSAP || reduce || isMobile){
+    document.body.classList.add('no-anim');
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  var phone = document.getElementById('phone');
+  var screen = document.getElementById('screen');
+  var heroCopy = document.getElementById('heroCopy');
+  var scrollHint = document.getElementById('scrollHint');
+  var floatRing = document.getElementById('floatRing');
+  var stage = document.getElementById('phoneStage');
+  var tagsWrap = document.getElementById('tagsWrap');
+  var screenBg = document.getElementById('screenBg');
+  var notch = document.getElementById('notch');
+  var sb = screen.querySelector('.sb');
+
+  var L = {
+    head:   screen.querySelector('[data-layer="head"]'),
+    search: screen.querySelector('[data-layer="search"]'),
+    stats:  screen.querySelector('[data-layer="stats"]'),
+    list:   screen.querySelector('[data-layer="list"]')
+  };
+  var T = {
+    head:   tagsWrap.querySelector('[data-tag="head"]'),
+    search: tagsWrap.querySelector('[data-tag="search"]'),
+    stats:  tagsWrap.querySelector('[data-tag="stats"]'),
+    list:   tagsWrap.querySelector('[data-tag="list"]')
+  };
+
+  gsap.set([T.head,T.search,T.stats,T.list],{opacity:0});
+
+  // cuánto hay que mover el stage para centrar el phone en el viewport
+  function centerShift(){
+    var r = phone.getBoundingClientRect();
+    return (window.innerWidth/2) - (r.left + r.width/2);
+  }
+
+  // cada callout se pega al costado de su capa, midiendo posiciones reales
+  var TAG_GAP = 58;
+  var tagCfg = [
+    {tag:T.head,   layer:L.head,   side:'r'},
+    {tag:T.search, layer:L.search, side:'l'},
+    {tag:T.stats,  layer:L.stats,  side:'r'},
+    {tag:T.list,   layer:L.list,   side:'l'}
+  ];
+  function placeTags(){
+    var wr = tagsWrap.getBoundingClientRect();
+    tagCfg.forEach(function(c){
+      var lr = c.layer.getBoundingClientRect();
+      var y = lr.top + lr.height/2 - c.tag.offsetHeight/2 - wr.top;
+      var x = c.side === 'l'
+        ? lr.left - wr.left - c.tag.offsetWidth - TAG_GAP
+        : lr.right - wr.left + TAG_GAP;
+      c.tag.style.top = y + 'px';
+      c.tag.style.left = x + 'px';
+    });
+  }
+
+  var tl = gsap.timeline({
+    scrollTrigger:{
+      trigger:'.hero', start:'top top',
+      endTrigger:'#heroSpacer', end:'bottom bottom',
+      scrub:1, pin:true, pinSpacing:false, invalidateOnRefresh:true,
+      onUpdate:placeTags
+    }
+  });
+
+  var allLayers = [L.head, L.search, L.stats, L.list];
+  var DIM = 0.14;
+
+  tl
+    // 1) el copy se despide; el stage completo (phone + tags) viaja al centro
+    .to(heroCopy,{opacity:0,x:-80,duration:0.8,ease:'power2.in'},0)
+    .to(scrollHint,{opacity:0,duration:0.3},0)
+    .to(floatRing,{opacity:0,scale:0.8,duration:0.5},0.1)
+    .to(stage,{x:function(){return centerShift();},duration:1.1,ease:'power2.inOut'},0.35)
+    .to(phone,{rotate:0,rotateX:5,duration:1.1,ease:'power2.inOut'},0.35)
+    // 2) el teléfono completo se apaga
+    .to(sb,{opacity:0.15,duration:0.6},1.5)
+    .to(notch,{opacity:0.3,duration:0.6},1.5)
+    .to(screenBg,{opacity:0.25,duration:0.6},1.5)
+    .to(phone,{backgroundColor:'rgba(14,20,36,0.4)',boxShadow:'0 0 0 1.5px rgba(27,34,56,0.5) inset,0 0 0 7px rgba(5,8,16,0.4),0 60px 80px -40px rgba(0,0,0,0.5),0 30px 60px -20px rgba(91,145,245,0.15)',duration:0.6},1.5)
+    .to(allLayers,{opacity:DIM,duration:0.6},1.5);
+
+  // 3) spotlight: cada función se enciende sola, con su callout
+  function focus(t0, layer, tag, dx, dy){
+    tl.to(layer,{opacity:1, x:dx, y:dy, scale:1.045, duration:0.4, ease:'power2.out'},t0)
+      .to(tag,{opacity:1, duration:0.3},t0+0.2)
+      .to(tag,{opacity:0, duration:0.25},t0+1.15)
+      .to(layer,{opacity:DIM, x:0, y:0, scale:1, duration:0.4, ease:'power2.inOut'},t0+1.2);
+  }
+  focus(2.2, L.head,   T.head,   0, -8);
+  focus(3.7, L.search, T.search, -10, 0);
+  focus(5.2, L.stats,  T.stats,  10, 0);
+  focus(6.7, L.list,   T.list,   0, 8);
+
+  tl
+    // 4) el teléfono se enciende de nuevo, completo
+    .to(allLayers,{opacity:1,duration:0.7},8.3)
+    .to(sb,{opacity:1,duration:0.7},8.3)
+    .to(notch,{opacity:1,duration:0.7},8.3)
+    .to(screenBg,{opacity:1,duration:0.7},8.3)
+    .to(phone,{backgroundColor:'#0E1424',boxShadow:'0 0 0 1.5px #1B2238 inset,0 0 0 7px #050810,0 60px 80px -40px rgba(0,0,0,0.85),0 30px 60px -20px rgba(91,145,245,0.30)',duration:0.7},8.3)
+    .to(phone,{rotateX:0,duration:0.8,ease:'power3.inOut'},8.4)
+    .to({},{duration:0.5});
+
+  ScrollTrigger.refresh();
+})();
+</script>
 </body>
 </html>
