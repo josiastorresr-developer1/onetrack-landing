@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo crear una rutina y asignarla a tu cliente en OneTrack — Tutorial | Aprende OneTrack</title>
+<meta name="description" content="Mira cómo crear un plan de entrenamiento en OneTrack: elige el día en el calendario, agrega ejercicios con series y repeticiones, deja comentarios y guárdala como plantilla reutilizable.">
+<meta property="og:title" content="Cómo crear una rutina para tu cliente en OneTrack — Tutorial paso a paso">
+<meta property="og:description" content="Demo guiada: del calendario al plan asignado, con plantillas y animaciones de ejercicios.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.onetrack.lat/aprende/crear-rutina-y-asignarla.html">
+<meta property="og:image" content="https://www.onetrack.lat/assets/onetrack-icon.png">
+<meta name="theme-color" content="#070B16">
+<link rel="canonical" href="https://www.onetrack.lat/aprende/crear-rutina-y-asignarla.html" />
+<link rel="alternate" hreflang="es" href="https://www.onetrack.lat/aprende/crear-rutina-y-asignarla.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.onetrack.lat/aprende/crear-rutina-y-asignarla.html" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/aprende/aprende.css?v=3">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo crear una rutina y asignarla a un cliente en OneTrack",
+  "description": "Crea el plan de entrenamiento de tu cliente en OneTrack: elige el día en el calendario semanal, nombra la rutina, agrega ejercicios con series, repeticiones y comentarios, y guárdala como plantilla para reutilizarla.",
+  "step": [
+    {"@type":"HowToStep","name":"Elige el día en el calendario","text":"El editor tiene un carrusel semanal: la rutina se asigna al día que selecciones del calendario de tu cliente."},
+    {"@type":"HowToStep","name":"Nombra la rutina","text":"Ponle un nombre claro, por ejemplo: Push · Pecho y tríceps."},
+    {"@type":"HowToStep","name":"Agrega los ejercicios","text":"Cada ejercicio lleva nombre (con autocompletado y animación de técnica), series y repeticiones con steppers, y un comentario opcional para tu cliente."},
+    {"@type":"HowToStep","name":"Añade tantos ejercicios como necesites","text":"Con el botón Añadir ejercicio armas la sesión completa."},
+    {"@type":"HowToStep","name":"Guarda y queda asignada","text":"Al guardar, la rutina aparece en la app de tu cliente en el día elegido. Puedes guardarla como plantilla y reutilizarla con otros clientes."}
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="top">
+  <div class="nav-inner">
+    <a href="/" class="brand"><img src="/assets/onetrack-icon.png" alt="" /> OneTrack</a>
+    <div class="nav-links"><a href="/#features">Funciones</a><a href="/#planes">Planes</a><a href="/blog/">Blog</a><a href="/aprende/" style="color:var(--accent-2)">Aprende OneTrack</a></div>
+    <a href="https://apps.apple.com/mx/app/onetrack/id6761740866" class="nav-cta" target="_blank" rel="noopener">Descargar</a>
+  </div>
+</nav>
+
+<header class="ap-hero" style="padding-bottom:44px">
+  <div class="wrap">
+    <div class="ap-crumb"><a href="/">onetrack</a> / <a href="/aprende/">aprende</a> / crear rutina</div>
+    <h1>Crea una rutina y asígnala<span class="dot-acc">.</span></h1>
+    <p>El plan de entrenamiento completo — calendario, ejercicios con series y reps, tus comentarios y plantillas reutilizables — armado desde tu iPhone en un par de minutos.</p>
+    <div class="tut-meta">
+      <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> 2 MIN</span>
+      <span>1 DEMO GUIADA</span>
+      <span>FLUJO: PLAN DE ENTRENAMIENTO</span>
+    </div>
+  </div>
+</header>
+
+<section class="tut-sect" style="padding-top:16px">
+  <div class="wrap">
+    <div class="eye">Demo · Editor de rutina</div>
+    <h2 class="tut-h">Del calendario al plan asignado</h2>
+    <p class="tut-lead">Este es el editor de rutina real. Eliges el día en el carrusel, y cada ejercicio lleva <em>series y reps con steppers, animación de técnica y tu comentario</em>. Al guardar, le llega a tu cliente al día que toca.</p>
+
+    <div class="dp" id="demoRutina" data-intro="La demo inicia al llegar aquí. También puedes controlarla abajo.">
+      <div class="dp-stage">
+        <template>
+          <div class="m-phone">
+            <div class="m-notch"></div>
+            <div class="m-scr">
+              <div class="m-sb"><span>10:12</span><span class="r"><svg viewBox="0 0 18 12" width="15"><path d="M1 8h2v3H1zM5 6h2v5H5zM9 4h2v7H9zM13 1h2v10h-2z"/></svg><svg viewBox="0 0 25 12" width="21" fill="none"><rect x="1" y="2" width="20" height="8" rx="2.2" stroke="#fff" stroke-opacity=".5"/><rect x="2.6" y="3.6" width="15" height="4.8" rx="1.2" fill="#fff"/><path d="M22.5 5v2" stroke="#fff" stroke-opacity=".5" stroke-linecap="round"/></svg></span></div>
+              <div class="m-body" style="gap:8px">
+                <div class="m-tbar">
+                  <span class="m-gcirc gl"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></span>
+                  <div class="tt"><b>Editar rutina</b><span>Manuel Carbajal</span></div>
+                  <span class="sp"></span>
+                </div>
+                <!-- carrusel de fechas -->
+                <div class="gc" style="padding:10px 11px">
+                  <div class="m-calhd">
+                    <span class="m-gcirc gl sm"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></span>
+                    <span class="mo">Julio 2026</span>
+                    <span class="m-gcirc gl sm"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
+                  </div>
+                  <div class="m-days">
+                    <span class="m-day" data-t="d13"><span class="ab">LUN</span><span class="num">13</span></span>
+                    <span class="m-day"><span class="ab">MAR</span><span class="num">14</span></span>
+                    <span class="m-day"><span class="ab">MIÉ</span><span class="num">15</span></span>
+                    <span class="m-day"><span class="ab">JUE</span><span class="num">16</span></span>
+                    <span class="m-day"><span class="ab">VIE</span><span class="num">17</span></span>
+                    <span class="m-day"><span class="ab">SÁB</span><span class="num">18</span></span>
+                    <span class="m-day"><span class="ab">DOM</span><span class="num">19</span></span>
+                  </div>
+                </div>
+                <!-- título -->
+                <div class="gc" style="padding:10px 12px">
+                  <div class="m-eyebrow">Título</div>
+                  <div class="m-in bare title" data-t="titulo" data-ph="Ej: Push · Pecho y tríceps"></div>
+                </div>
+                <!-- header ejercicios + plantillas -->
+                <div style="display:flex;align-items:center;gap:6px;padding:0 2px">
+                  <span style="font-size:11.5px;font-weight:600;color:var(--tp)">Ejercicios</span>
+                  <span style="flex:1"></span>
+                  <span class="m-gcirc gl sm" title="Guardar plantilla"><svg viewBox="0 0 24 24"><path d="M12 15V3"/><path d="M8 7l4-4 4 4"/><path d="M4 14v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/></svg></span>
+                  <span class="m-gcirc gl sm" data-t="tpl" style="color:var(--ag)"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M8 11l4 4 4-4"/><path d="M4 14v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/></svg></span>
+                </div>
+                <!-- ejercicio 1 -->
+                <div class="gc" data-t="ex1" style="padding:11px 12px">
+                  <div style="display:flex;align-items:center;gap:7px">
+                    <span class="m-exnum">1</span>
+                    <div class="m-in bare" data-t="ex1n" data-ph="Nombre del ejercicio" style="flex:1;font-weight:600"></div>
+                    <span class="m-anim g" data-t="ex1a"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5L7 4.5z"/></svg>animación</span>
+                    <svg class="m-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>
+                  </div>
+                  <div class="m-steps" style="margin-top:9px">
+                    <div class="m-step"><span class="lb">Series</span><span class="ctrl gl"><span>−</span><b data-t="ex1s">3</b><span data-t="ex1splus">+</span></span></div>
+                    <div class="m-step"><span class="lb">Reps</span><span class="ctrl gl"><span>−</span><b>10</b><span>+</span></span></div>
+                  </div>
+                  <div class="m-in gl" data-t="ex1c" data-ph="Comentario para el cliente…" style="margin-top:9px"></div>
+                </div>
+                <!-- ejercicio 2 (aparece en la demo) -->
+                <div class="gc g" data-t="ex2" style="padding:11px 12px">
+                  <div style="display:flex;align-items:center;gap:7px">
+                    <span class="m-exnum">2</span>
+                    <div class="m-in bare" data-t="ex2n" data-ph="Nombre del ejercicio" style="flex:1;font-weight:600"></div>
+                    <svg class="m-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>
+                  </div>
+                  <div class="m-steps" style="margin-top:9px">
+                    <div class="m-step"><span class="lb">Series</span><span class="ctrl gl"><span>−</span><b>3</b><span>+</span></span></div>
+                    <div class="m-step"><span class="lb">Reps</span><span class="ctrl gl"><span>−</span><b>12</b><span>+</span></span></div>
+                  </div>
+                </div>
+                <!-- añadir ejercicio (punteado azul, como en la app) -->
+                <div class="m-dashed" data-t="addex"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>Añadir ejercicio</div>
+                <span style="flex:1"></span>
+                <div class="m-outbtn" data-t="guardar"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-t="guardartxt">Guardar rutina</span></div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+      <div class="dp-bar">
+        <div class="dp-ctrl">
+          <button data-dp="play" aria-label="Pausar / reproducir"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5L7 4.5z"/></svg></button>
+          <button data-dp="next" aria-label="Siguiente paso"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4.5v15l10-7.5L5 4.5z"/><rect x="17" y="4.5" width="2.6" height="15" rx="1"/></svg></button>
+          <button data-dp="restart" aria-label="Repetir"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></button>
+        </div>
+        <span class="dp-stepnum">·</span>
+        <p class="dp-caption"></p>
+        <div class="dp-dots"></div>
+      </div>
+    </div>
+
+    <ol class="steps-txt">
+      <li><b>Elige el día en el carrusel.</b> La rutina se asigna a ese día del calendario de tu cliente.</li>
+      <li><b>Nombra la rutina.</b> Por ejemplo: "Push · Pecho y tríceps".</li>
+      <li><b>Agrega los ejercicios.</b> El nombre tiene autocompletado con animaciones de técnica; series y reps se ajustan con steppers, y puedes dejar un comentario por ejercicio.</li>
+      <li><b>Guarda.</b> Le llega a tu cliente en el día que toca — y puedes guardar la rutina como plantilla para reutilizarla con otros clientes.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="tut-sect alt" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="cta2">
+      <div class="c hl">
+        <span class="tagc">Gratis hasta 3 clientes</span>
+        <h3>Arma tu primera rutina hoy</h3>
+        <p>Descarga OneTrack y crea el plan de tu primer cliente en minutos, con plantillas reutilizables.</p>
+        <a href="https://apps.apple.com/mx/app/onetrack/id6761740866" class="btn-solid" target="_blank" rel="noopener">Descargar en el App Store</a>
+      </div>
+      <div class="c">
+        <span class="tagc">Siguiente paso</span>
+        <h3>Ahora la dieta con macros</h3>
+        <p>El entrenamiento ya está. Sigue el plan de nutrición: comidas, alimentos, macros y sustitutos.</p>
+        <a href="/aprende/dieta-con-macros.html" class="btn-line">Ver tutorial de dieta →</a>
+      </div>
+    </div>
+    <div class="tut-next">
+      <a href="/aprende/dar-de-alta-un-cliente.html">← Anterior: Da de alta un cliente</a>
+      <a href="/aprende/dieta-con-macros.html">Siguiente: Arma una dieta con macros →</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="foot-min">
+    <span>© 2026 ONETRACK · APRENDE ONETRACK</span>
+    <span><a href="/aprende/">← Todos los tutoriales</a></span>
+    <span><a href="/">ONETRACK.LAT</a></span>
+  </div>
+</div></footer>
+
+<script src="/aprende/demo-player.js?v=3"></script>
+<script>
+new DemoPlayer('#demoRutina', { steps: [
+  { caption: 'Estás en el editor de rutina de Manuel. Primero: el día. Toca el lunes en el carrusel.',
+    run: [ ['click','[data-t=d13]'], ['cls','[data-t=d13]','+on'], ['wait',400] ] },
+  { caption: 'Nombra la rutina del día.',
+    run: [ ['click','[data-t=titulo]'], ['cls','[data-t=titulo]','+focus'], ['type','[data-t=titulo]','Push · Pecho y tríceps'], ['cls','[data-t=titulo]','-focus'], ['wait',300] ] },
+  { caption: 'El primer ejercicio. OneTrack autocompleta el nombre — y si tiene animación de técnica, aparece el botón para verla.',
+    run: [ ['click','[data-t=ex1n]'], ['cls','[data-t=ex1n]','+focus'], ['type','[data-t=ex1n]','Press de banca'], ['cls','[data-t=ex1n]','-focus'], ['show','[data-t=ex1a]'], ['wait',400] ] },
+  { caption: 'Series y reps se ajustan con steppers. Una serie más…',
+    run: [ ['click','[data-t=ex1splus]'], ['text','[data-t=ex1s]','4'], ['wait',500] ] },
+  { caption: 'Y puedes dejarle un comentario a tu cliente en cada ejercicio.',
+    run: [ ['click','[data-t=ex1c]'], ['cls','[data-t=ex1c]','+focus'], ['type','[data-t=ex1c]','Baja controlado, 2 seg'], ['cls','[data-t=ex1c]','-focus'], ['wait',300] ] },
+  { caption: 'Con «Añadir ejercicio» armas la sesión completa. Y con los botones de plantilla la reutilizas con otros clientes.',
+    run: [ ['click','[data-t=addex]'], ['show','[data-t=ex2]'], ['text','[data-t=ex2n]','Fondos en paralelas'], ['wait',350], ['move','[data-t=tpl]'], ['wait',500] ] },
+  { caption: 'Guarda — y la rutina ya está en la app de Manuel, en su lunes.',
+    run: [ ['click','[data-t=guardar]'], ['text','[data-t=guardartxt]','✓ ¡Guardada!'], ['toast','Rutina asignada · Lunes 13 jul'], ['hidecursor'], ['wait',400] ], hold: 2200 }
+]});
+</script>
+
+</body>
+</html>

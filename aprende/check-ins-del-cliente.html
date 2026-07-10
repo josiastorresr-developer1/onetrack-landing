@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo funcionan los check-ins en OneTrack — Tutorial paso a paso | Aprende OneTrack</title>
+<meta name="description" content="Mira cómo tu cliente reporta su progreso en OneTrack: peso, nota de la semana y foto de progreso en un check-in de 30 segundos — y cómo te llega a ti al instante.">
+<meta property="og:title" content="Cómo funcionan los check-ins en OneTrack — Tutorial paso a paso">
+<meta property="og:description" content="Demo guiada: el check-in semanal del cliente y cómo lo ve el coach, en tiempo real.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.onetrack.lat/aprende/check-ins-del-cliente.html">
+<meta property="og:image" content="https://www.onetrack.lat/assets/onetrack-icon.png">
+<meta name="theme-color" content="#070B16">
+<link rel="canonical" href="https://www.onetrack.lat/aprende/check-ins-del-cliente.html" />
+<link rel="alternate" hreflang="es" href="https://www.onetrack.lat/aprende/check-ins-del-cliente.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.onetrack.lat/aprende/check-ins-del-cliente.html" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/aprende/aprende.css?v=3">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo funcionan los check-ins de clientes en OneTrack",
+  "description": "El cliente reporta su progreso semanal en OneTrack con un check-in de 30 segundos: peso, nota de cómo se sintió y foto de progreso opcional. El coach lo recibe al instante en su tablero.",
+  "step": [
+    {"@type":"HowToStep","name":"Tu cliente abre Check-in en su app","text":"Desde su pantalla principal, tu cliente entra a Check-in cuando le toca reportar."},
+    {"@type":"HowToStep","name":"Registra su peso","text":"Escribe su peso del día, por ejemplo 79.4 kg."},
+    {"@type":"HowToStep","name":"Agrega una nota","text":"Cuenta cómo se sintió la semana: energía, hambre, sueño — el contexto que a ti te sirve para ajustar."},
+    {"@type":"HowToStep","name":"Foto de progreso opcional","text":"Puede adjuntar una foto de progreso para el historial visual."},
+    {"@type":"HowToStep","name":"Tú lo ves al instante","text":"El check-in aparece en tu tablero de coach de inmediato: peso, tendencia y quién ya reportó. Sin perseguir a nadie por WhatsApp."}
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="top">
+  <div class="nav-inner">
+    <a href="/" class="brand"><img src="/assets/onetrack-icon.png" alt="" /> OneTrack</a>
+    <div class="nav-links"><a href="/#features">Funciones</a><a href="/#planes">Planes</a><a href="/blog/">Blog</a><a href="/aprende/" style="color:var(--accent-2)">Aprende OneTrack</a></div>
+    <a href="https://apps.apple.com/mx/app/onetrack/id6761740866" class="nav-cta" target="_blank" rel="noopener">Descargar</a>
+  </div>
+</nav>
+
+<header class="ap-hero" style="padding-bottom:44px">
+  <div class="wrap">
+    <div class="ap-crumb"><a href="/">onetrack</a> / <a href="/aprende/">aprende</a> / check-ins</div>
+    <h1>Check-ins del cliente<span class="dot-acc">.</span></h1>
+    <p>Peso, nota y foto de progreso en 30 segundos. Tu cliente reporta desde su app — y a ti te llega al instante, sin perseguir a nadie.</p>
+    <div class="tut-meta">
+      <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> 2 MIN</span>
+      <span>2 DEMOS GUIADAS</span>
+      <span>FLUJO: SEGUIMIENTO SEMANAL</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= DEMO 1 · LADO DEL CLIENTE ================= -->
+<section class="tut-sect" style="padding-top:16px">
+  <div class="wrap">
+    <div class="eye">Demo 1 · El lado de tu cliente</div>
+    <h2 class="tut-h">El check-in toma 30 segundos</h2>
+    <p class="tut-lead">Esta es la pantalla de check-in que ve tu cliente: <em>peso, nota y foto opcional</em>. Tan simple que sí lo hace cada semana.</p>
+
+    <div class="dp" id="demoCheckin" data-intro="La demo inicia al llegar aquí. También puedes controlarla abajo.">
+      <div class="dp-stage">
+        <template>
+          <div class="m-phone">
+            <div class="m-notch"></div>
+            <div class="m-scr">
+              <div class="m-sb"><span>8:05</span><span class="r"><svg viewBox="0 0 18 12" width="15"><path d="M1 8h2v3H1zM5 6h2v5H5zM9 4h2v7H9zM13 1h2v10h-2z"/></svg><svg viewBox="0 0 25 12" width="21" fill="none"><rect x="1" y="2" width="20" height="8" rx="2.2" stroke="#fff" stroke-opacity=".5"/><rect x="2.6" y="3.6" width="15" height="4.8" rx="1.2" fill="#fff"/><path d="M22.5 5v2" stroke="#fff" stroke-opacity=".5" stroke-linecap="round"/></svg></span></div>
+              <div class="m-body" style="gap:9px">
+                <div class="m-tbar">
+                  <span class="m-gcirc gl"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></span>
+                  <div class="tt"><b>Check-in</b></div>
+                  <span class="sp"></span>
+                </div>
+                <div class="gc" style="padding:11px 12px">
+                  <div class="m-eyebrow">Peso</div>
+                  <div class="m-in gl" data-t="peso" data-ph="Ej: 79.4" style="margin-top:8px"></div>
+                  <div class="m-tip">Tip: usa punto decimal · ej: 79.5</div>
+                </div>
+                <div class="gc" style="padding:11px 12px">
+                  <div class="m-eyebrow">Nota</div>
+                  <div class="m-in gl" data-t="nota" data-ph="¿Cómo te sentiste esta semana?" style="margin-top:8px;min-height:52px;align-items:flex-start;padding-top:9px"></div>
+                </div>
+                <div class="gc" style="padding:11px 12px">
+                  <div class="m-eyebrow">Foto de progreso</div>
+                  <div class="m-cta quiet" data-t="foto" style="margin-top:8px"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.4"/></svg><span data-t="fototxt">Seleccionar foto</span></div>
+                </div>
+                <div class="m-okline g" data-t="ok"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Check-in guardado</div>
+                <span style="flex:1"></span>
+                <span class="m-cta" data-t="guardar"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Guardar check-in</span>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+      <div class="dp-bar">
+        <div class="dp-ctrl">
+          <button data-dp="play" aria-label="Pausar / reproducir"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5L7 4.5z"/></svg></button>
+          <button data-dp="next" aria-label="Siguiente paso"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4.5v15l10-7.5L5 4.5z"/><rect x="17" y="4.5" width="2.6" height="15" rx="1"/></svg></button>
+          <button data-dp="restart" aria-label="Repetir"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></button>
+        </div>
+        <span class="dp-stepnum">·</span>
+        <p class="dp-caption"></p>
+        <div class="dp-dots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEMO 2 · LADO DEL COACH ================= -->
+<section class="tut-sect alt">
+  <div class="wrap">
+    <div class="eye">Demo 2 · Tu lado (coach)</div>
+    <h2 class="tut-h">A ti te llega al instante</h2>
+    <p class="tut-lead">Sin capturas ni mensajes: el check-in de Manuel <em>ya está en tu tablero</em> — peso nuevo, tendencia y su estatus en verde.</p>
+
+    <div class="dp" id="demoCoachCk" data-intro="La demo inicia al llegar aquí.">
+      <div class="dp-stage">
+        <template>
+          <div class="m-phone">
+            <div class="m-notch"></div>
+            <div class="m-scr">
+              <div class="m-sb"><span>8:06</span><span class="r"><svg viewBox="0 0 18 12" width="15"><path d="M1 8h2v3H1zM5 6h2v5H5zM9 4h2v7H9zM13 1h2v10h-2z"/></svg><svg viewBox="0 0 25 12" width="21" fill="none"><rect x="1" y="2" width="20" height="8" rx="2.2" stroke="#fff" stroke-opacity=".5"/><rect x="2.6" y="3.6" width="15" height="4.8" rx="1.2" fill="#fff"/><path d="M22.5 5v2" stroke="#fff" stroke-opacity=".5" stroke-linecap="round"/></svg></span></div>
+              <div class="m-body">
+                <div class="m-top">
+                  <span class="m-gcirc gl"><svg class="otlogo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.6"/><path d="M4.7 5.8h14.6M12 5.8v15.8"/></svg></span>
+                  <span class="m-acts">
+                    <span class="m-gcirc gl"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M18 7v6M21 10h-6"/></svg></span>
+                    <span class="m-gcirc gl"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.5-2-3.4-2.3 1a7 7 0 0 0-1.7-1l-.3-2.5h-4l-.3 2.5a7 7 0 0 0-1.7 1l-2.3-1-2 3.4 2 1.5a7 7 0 0 0 0 2l-2 1.5 2 3.4 2.3-1a7 7 0 0 0 1.7 1l.3 2.5h4l.3-2.5a7 7 0 0 0 1.7-1l2.3 1 2-3.4-2-1.5a7 7 0 0 0 .1-1z"/></svg></span>
+                  </span>
+                </div>
+                <div>
+                  <div class="m-hi">Hola, Pancho</div>
+                  <div class="m-subt" style="margin-top:3px" data-t="subt">8 clientes · 3 necesitan atención</div>
+                </div>
+                <div class="m-stats">
+                  <div class="gc m-stat"><div class="h"><span class="dot g"></span>Al día<svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div><div class="v" data-t="aldia">5</div><div class="c">check-in &lt; 7 días</div></div>
+                  <div class="gc m-stat"><div class="h"><span class="dot o"></span>Atención<svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div><div class="v" data-t="atencion">3</div><div class="c">sin check-in reciente</div></div>
+                </div>
+                <div class="m-list">
+                  <div class="m-row gl" data-t="manuel"><span class="m-av">MC</span><div class="m-who"><div class="nm">Manuel Carbajal</div><div class="st o" data-t="mst">Hace 8 días</div></div><div class="m-kg"><b data-t="mkg">80.0 kg</b><span class="dl dn g" data-t="mdl">↓ 0.6</span></div><svg class="ch" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+                  <div class="m-row gl"><span class="m-av">VE</span><div class="m-who"><div class="nm">Vanessa Escudero</div><div class="st g">Hace 2 días</div></div><div class="m-kg"><b>61.2 kg</b><span class="dl dn">↓ 0.4</span></div><svg class="ch" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+                  <div class="m-row gl"><span class="m-av">SR</span><div class="m-who"><div class="nm">Sofía Ramírez</div><div class="st g">Hace 3 días</div></div><div class="m-kg"><b>58.7 kg</b><span class="dl dn">↓ 0.3</span></div><svg class="ch" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+      <div class="dp-bar">
+        <div class="dp-ctrl">
+          <button data-dp="play" aria-label="Pausar / reproducir"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5L7 4.5z"/></svg></button>
+          <button data-dp="next" aria-label="Siguiente paso"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4.5v15l10-7.5L5 4.5z"/><rect x="17" y="4.5" width="2.6" height="15" rx="1"/></svg></button>
+          <button data-dp="restart" aria-label="Repetir"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></button>
+        </div>
+        <span class="dp-stepnum">·</span>
+        <p class="dp-caption"></p>
+        <div class="dp-dots"></div>
+      </div>
+    </div>
+
+    <ol class="steps-txt">
+      <li><b>Tu cliente abre Check-in.</b> Peso, nota de la semana y foto de progreso opcional.</li>
+      <li><b>Guarda en 30 segundos.</b> Sin formularios eternos — por eso sí reporta cada semana.</li>
+      <li><b>A ti te llega al instante.</b> Su peso, la tendencia y el estatus en verde, directo en tu tablero. Sabes quién reportó y quién necesita un empujón — sin abrir WhatsApp.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="tut-sect" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="cta2">
+      <div class="c hl">
+        <span class="tagc">Gratis hasta 3 clientes</span>
+        <h3>Deja de perseguir check-ins</h3>
+        <p>Descarga OneTrack y deja que el seguimiento semanal llegue solo a tu tablero.</p>
+        <a href="https://apps.apple.com/mx/app/onetrack/id6761740866" class="btn-solid" target="_blank" rel="noopener">Descargar en el App Store</a>
+      </div>
+      <div class="c">
+        <span class="tagc">Siguiente paso</span>
+        <h3>El progreso completo</h3>
+        <p>Cada check-in alimenta el historial. Mira cómo se ve el progreso de tu cliente a lo largo del tiempo.</p>
+        <a href="/aprende/progreso-e-historial.html" class="btn-line">Ver tutorial de progreso →</a>
+      </div>
+    </div>
+    <div class="tut-next">
+      <a href="/aprende/dieta-con-macros.html">← Anterior: Dieta con macros</a>
+      <a href="/aprende/progreso-e-historial.html">Siguiente: Progreso e historial →</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="foot-min">
+    <span>© 2026 ONETRACK · APRENDE ONETRACK</span>
+    <span><a href="/aprende/">← Todos los tutoriales</a></span>
+    <span><a href="/">ONETRACK.LAT</a></span>
+  </div>
+</div></footer>
+
+<script src="/aprende/demo-player.js?v=3"></script>
+<script>
+/* ---- Demo 1 · cliente hace check-in ---- */
+new DemoPlayer('#demoCheckin', { steps: [
+  { caption: 'Es lunes en la mañana: a Manuel le toca check-in. Primero, su peso.',
+    run: [ ['click','[data-t=peso]'], ['cls','[data-t=peso]','+focus'], ['type','[data-t=peso]','79.4'], ['cls','[data-t=peso]','-focus'], ['wait',300] ] },
+  { caption: 'Una nota de cómo se sintió — el contexto que a ti te sirve para ajustar.',
+    run: [ ['click','[data-t=nota]'], ['cls','[data-t=nota]','+focus'], ['type','[data-t=nota]','Con más energía, dormí mejor'], ['cls','[data-t=nota]','-focus'], ['wait',300] ] },
+  { caption: 'Foto de progreso opcional, para el historial visual.',
+    run: [ ['click','[data-t=foto]'], ['text','[data-t=fototxt]','Cambiar foto'], ['toast','Foto agregada'], ['wait',300] ] },
+  { caption: 'Y guarda. Listo — 30 segundos.',
+    run: [ ['click','[data-t=guardar]'], ['show','[data-t=ok]'], ['toast','Check-in guardado'], ['hidecursor'], ['wait',400] ], hold: 2000 }
+]});
+
+/* ---- Demo 2 · el coach lo recibe ---- */
+new DemoPlayer('#demoCoachCk', { steps: [
+  { caption: 'Mientras tanto, en tu tablero: Manuel llevaba 8 días sin reportar…',
+    run: [ ['move','[data-t=manuel]'], ['wait',900] ] },
+  { caption: '…y su check-in acaba de llegar. Peso nuevo, tendencia a la baja, estatus en verde.',
+    run: [ ['cls','[data-t=manuel]','+hl'], ['cls','[data-t=mst]','-o +g'], ['text','[data-t=mst]','Check-in hoy'], ['text','[data-t=mkg]','79.4 kg'], ['show','[data-t=mdl]'], ['toast','Manuel Carbajal · Check-in nuevo'], ['wait',600] ] },
+  { caption: 'Tus números se actualizan solos: 6 al día, 2 por atender. Todo sin abrir WhatsApp.',
+    run: [ ['text','[data-t=aldia]','6'], ['text','[data-t=atencion]','2'], ['text','[data-t=subt]','8 clientes · 2 necesitan atención'], ['cls','[data-t=manuel]','-hl'], ['hidecursor'], ['wait',500] ], hold: 2400 }
+]});
+</script>
+
+</body>
+</html>

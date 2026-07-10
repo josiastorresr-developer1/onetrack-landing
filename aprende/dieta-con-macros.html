@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo armar una dieta con macros en OneTrack — Tutorial paso a paso | Aprende OneTrack</title>
+<meta name="description" content="Mira cómo crear un plan de nutrición en OneTrack: días de entrenamiento y descanso, bloques de comida, alimentos con sustitutos, y macros calculados con IA (kcal, proteína, carbs y grasas).">
+<meta property="og:title" content="Cómo armar una dieta con macros en OneTrack — Tutorial paso a paso">
+<meta property="og:description" content="Demo guiada: del desayuno a los macros calculados con IA, el plan de nutrición completo de tu cliente.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.onetrack.lat/aprende/dieta-con-macros.html">
+<meta property="og:image" content="https://www.onetrack.lat/assets/onetrack-icon.png">
+<meta name="theme-color" content="#070B16">
+<link rel="canonical" href="https://www.onetrack.lat/aprende/dieta-con-macros.html" />
+<link rel="alternate" hreflang="es" href="https://www.onetrack.lat/aprende/dieta-con-macros.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.onetrack.lat/aprende/dieta-con-macros.html" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/aprende/aprende.css?v=3">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo armar una dieta con macros en OneTrack",
+  "description": "Crea el plan de nutrición de tu cliente en OneTrack: planes distintos para días de entrenamiento y descanso, bloques de comida, alimentos con cantidades y sustitutos, y macros por alimento — calculados con IA en el plan Unlimited.",
+  "step": [
+    {"@type":"HowToStep","name":"Elige el tipo de día","text":"La dieta tiene dos versiones: día de entrenamiento y día de descanso. Cambias entre ellas con el selector superior."},
+    {"@type":"HowToStep","name":"Deja una nota para tu cliente","text":"La nota del coach aparece arriba del plan, por ejemplo: este día es más ligero, entrenas pierna."},
+    {"@type":"HowToStep","name":"Crea bloques de comida con alimentos","text":"Desayuno, comida, cena o tu esquema. Cada alimento lleva nombre y cantidad, y puede tener sustitutos equivalentes."},
+    {"@type":"HowToStep","name":"Calcula los macros con IA","text":"kcal, proteína, carbohidratos y grasas por alimento. Puedes escribirlos tú o dejar que la IA analice el día completo (plan Unlimited)."},
+    {"@type":"HowToStep","name":"Guarda y queda asignada","text":"El plan completo aparece en la app de tu cliente. Guárdalo como plantilla para reutilizarlo con otros clientes."}
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="top">
+  <div class="nav-inner">
+    <a href="/" class="brand"><img src="/assets/onetrack-icon.png" alt="" /> OneTrack</a>
+    <div class="nav-links"><a href="/#features">Funciones</a><a href="/#planes">Planes</a><a href="/blog/">Blog</a><a href="/aprende/" style="color:var(--accent-2)">Aprende OneTrack</a></div>
+    <a href="https://apps.apple.com/mx/app/onetrack/id6761740866" class="nav-cta" target="_blank" rel="noopener">Descargar</a>
+  </div>
+</nav>
+
+<header class="ap-hero" style="padding-bottom:44px">
+  <div class="wrap">
+    <div class="ap-crumb"><a href="/">onetrack</a> / <a href="/aprende/">aprende</a> / dieta con macros</div>
+    <h1>Arma una dieta con macros<span class="dot-acc">.</span></h1>
+    <p>Días de entrenamiento y descanso, bloques de comida, sustitutos por alimento y macros calculados con IA. El plan de nutrición completo, sin PDFs perdidos en WhatsApp.</p>
+    <div class="tut-meta">
+      <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> 2 MIN</span>
+      <span>1 DEMO GUIADA</span>
+      <span>FLUJO: PLAN DE NUTRICIÓN</span>
+    </div>
+  </div>
+</header>
+
+<section class="tut-sect" style="padding-top:16px">
+  <div class="wrap">
+    <div class="eye">Demo · Editor de dieta</div>
+    <h2 class="tut-h">Del desayuno a los macros calculados</h2>
+    <p class="tut-lead">Este es el editor de dieta real. Cada alimento lleva cantidad, <em>sustitutos equivalentes</em> y sus macros — que puedes escribir tú o dejar que <em>la IA analice el día completo</em> (plan Unlimited).</p>
+
+    <div class="dp" id="demoDieta" data-intro="La demo inicia al llegar aquí. También puedes controlarla abajo.">
+      <div class="dp-stage">
+        <template>
+          <div class="m-phone">
+            <div class="m-notch"></div>
+            <div class="m-scr">
+              <div class="m-sb"><span>10:26</span><span class="r"><svg viewBox="0 0 18 12" width="15"><path d="M1 8h2v3H1zM5 6h2v5H5zM9 4h2v7H9zM13 1h2v10h-2z"/></svg><svg viewBox="0 0 25 12" width="21" fill="none"><rect x="1" y="2" width="20" height="8" rx="2.2" stroke="#fff" stroke-opacity=".5"/><rect x="2.6" y="3.6" width="15" height="4.8" rx="1.2" fill="#fff"/><path d="M22.5 5v2" stroke="#fff" stroke-opacity=".5" stroke-linecap="round"/></svg></span></div>
+              <div class="m-body" style="gap:8px">
+                <div class="m-tbar">
+                  <span class="m-gcirc gl"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></span>
+                  <div class="tt"><b>Editar dieta</b><span>Manuel Carbajal</span></div>
+                  <span class="sp"></span>
+                </div>
+                <!-- selector entrenamiento / descanso -->
+                <div class="m-gseg gl" data-t="seg"><span class="on">Entrenamiento</span><span>Descanso</span></div>
+                <!-- nota del coach -->
+                <div class="gc" style="padding:10px 12px">
+                  <div class="m-eyebrow blue">Nota del coach</div>
+                  <div class="m-in bare" data-t="nota" data-ph="Ej: este día es más ligero, entrenas pierna."></div>
+                </div>
+                <!-- bloque de comida -->
+                <div class="gc" data-t="bloque" style="padding:11px 12px">
+                  <div style="display:flex;align-items:center;gap:7px">
+                    <div class="m-in bare title" data-t="bname" data-ph="Desayuno, comida, cena…" style="flex:1"></div>
+                    <svg class="m-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>
+                  </div>
+                  <div style="display:flex;gap:6px;margin-top:9px">
+                    <div class="m-in gl" data-t="food" data-ph="Ej: pechuga a la plancha" style="flex:2.4"></div>
+                    <div class="m-in gl c" data-t="qty" data-ph="Cant." style="flex:1"></div>
+                  </div>
+                  <div class="m-macros" style="margin-top:7px">
+                    <div class="m-mac gl"><div class="k">kcal</div><div class="v" data-t="kcal"></div></div>
+                    <div class="m-mac gl"><div class="k">prot</div><div class="v" data-t="prot"></div></div>
+                    <div class="m-mac gl"><div class="k">carbs</div><div class="v" data-t="carbs"></div></div>
+                    <div class="m-mac gl"><div class="k">grs</div><div class="v" data-t="grs"></div></div>
+                  </div>
+                  <!-- sustituto (equivalente) -->
+                  <div class="g" data-t="equivrow" style="display:flex;align-items:center;gap:6px;margin-top:7px">
+                    <svg style="width:10px;height:10px;stroke:var(--tt);fill:none;stroke-width:2" viewBox="0 0 24 24"><path d="M8 3L4 7l4 4"/><path d="M4 7h16"/><path d="M16 21l4-4-4-4"/><path d="M20 17H4"/></svg>
+                    <div class="m-in gl" data-t="equiv" data-ph="Equivalente (ej: avena con agua)" style="flex:1;min-height:28px;font-size:10px"></div>
+                  </div>
+                  <div style="display:flex;gap:12px;margin-top:9px">
+                    <span class="m-sust" data-t="sust"><svg viewBox="0 0 24 24"><path d="M8 3L4 7l4 4"/><path d="M4 7h16"/><path d="M16 21l4-4-4-4"/><path d="M20 17H4"/></svg>Sustituto</span>
+                    <span class="m-addfood"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Alimento</span>
+                  </div>
+                </div>
+                <!-- añadir bloque -->
+                <div class="m-dashed" data-t="addbloque"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>Añadir bloque de comida</div>
+                <span style="flex:1"></span>
+                <!-- IA (plan Unlimited) -->
+                <div class="m-outbtn sec" data-t="ia"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z"/></svg><span data-t="iatxt">Analizar día con IA ✦</span></div>
+                <div class="m-outbtn" data-t="guardar"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-t="guardartxt">Guardar dieta</span></div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+      <div class="dp-bar">
+        <div class="dp-ctrl">
+          <button data-dp="play" aria-label="Pausar / reproducir"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5L7 4.5z"/></svg></button>
+          <button data-dp="next" aria-label="Siguiente paso"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4.5v15l10-7.5L5 4.5z"/><rect x="17" y="4.5" width="2.6" height="15" rx="1"/></svg></button>
+          <button data-dp="restart" aria-label="Repetir"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></button>
+        </div>
+        <span class="dp-stepnum">·</span>
+        <p class="dp-caption"></p>
+        <div class="dp-dots"></div>
+      </div>
+    </div>
+
+    <ol class="steps-txt">
+      <li><b>Elige el tipo de día.</b> Entrenamiento o descanso — cada uno con su propio plan.</li>
+      <li><b>Deja una nota para tu cliente.</b> Aparece arriba de su dieta.</li>
+      <li><b>Crea los bloques de comida.</b> Cada alimento lleva cantidad y puede tener <b style="display:inline">sustitutos equivalentes</b> (ej: avena con agua).</li>
+      <li><b>Calcula los macros.</b> kcal, proteína, carbs y grasas por alimento — a mano, o con "Analizar día con IA ✦" en el plan Unlimited.</li>
+      <li><b>Guarda.</b> El plan completo aparece en la app de tu cliente, y puedes guardarlo como plantilla.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="tut-sect alt" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="cta2">
+      <div class="c hl">
+        <span class="tagc">Gratis hasta 3 clientes</span>
+        <h3>Arma tu primer plan de nutrición</h3>
+        <p>Descarga OneTrack y deja de mandar dietas en PDF. Tu cliente las ve en su app, con macros claros.</p>
+        <a href="https://apps.apple.com/mx/app/onetrack/id6761740866" class="btn-solid" target="_blank" rel="noopener">Descargar en el App Store</a>
+      </div>
+      <div class="c">
+        <span class="tagc">Siguiente paso</span>
+        <h3>El check-in de tu cliente</h3>
+        <p>Rutina y dieta listas. Ahora mira cómo tu cliente reporta su progreso cada semana.</p>
+        <a href="/aprende/check-ins-del-cliente.html" class="btn-line">Ver tutorial de check-ins →</a>
+      </div>
+    </div>
+    <div class="tut-next">
+      <a href="/aprende/crear-rutina-y-asignarla.html">← Anterior: Crea una rutina</a>
+      <a href="/aprende/check-ins-del-cliente.html">Siguiente: Check-ins del cliente →</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="foot-min">
+    <span>© 2026 ONETRACK · APRENDE ONETRACK</span>
+    <span><a href="/aprende/">← Todos los tutoriales</a></span>
+    <span><a href="/">ONETRACK.LAT</a></span>
+  </div>
+</div></footer>
+
+<script src="/aprende/demo-player.js?v=3"></script>
+<script>
+new DemoPlayer('#demoDieta', { steps: [
+  { caption: 'El editor de dieta de Manuel. Arriba eliges el tipo de día: hoy armamos el de entrenamiento.',
+    run: [ ['move','[data-t=seg]'], ['wait',600] ] },
+  { caption: 'Una nota para tu cliente, que verá arriba de su plan.',
+    run: [ ['click','[data-t=nota]'], ['cls','[data-t=nota]','+focus'], ['type','[data-t=nota]','Hoy entrenas pierna, come completo'], ['cls','[data-t=nota]','-focus'], ['wait',300] ] },
+  { caption: 'Nombra el bloque de comida…',
+    run: [ ['click','[data-t=bname]'], ['cls','[data-t=bname]','+focus'], ['type','[data-t=bname]','Desayuno'], ['cls','[data-t=bname]','-focus'], ['wait',300] ] },
+  { caption: '…y agrega el alimento con su cantidad.',
+    run: [ ['click','[data-t=food]'], ['cls','[data-t=food]','+focus'], ['type','[data-t=food]','Avena con plátano'], ['cls','[data-t=food]','-focus'], ['click','[data-t=qty]'], ['cls','[data-t=qty]','+focus'], ['type','[data-t=qty]','80 g'], ['cls','[data-t=qty]','-focus'], ['wait',300] ] },
+  { caption: '¿Tu cliente no tiene avena? Dale sustitutos equivalentes por alimento.',
+    run: [ ['click','[data-t=sust]'], ['show','[data-t=equivrow]'], ['click','[data-t=equiv]'], ['cls','[data-t=equiv]','+focus'], ['type','[data-t=equiv]','Avena con agua'], ['cls','[data-t=equiv]','-focus'], ['wait',400] ] },
+  { caption: 'Los macros los puedes escribir tú… o dejar que la IA analice el día completo (plan Unlimited).',
+    run: [ ['click','[data-t=ia]'], ['text','[data-t=iatxt]','Analizando…'], ['toast','Analizando macros con IA ✦'], ['wait',500],
+           ['text','[data-t=kcal]','312'], ['wait',140], ['text','[data-t=prot]','11'], ['wait',140], ['text','[data-t=carbs]','54'], ['wait',140], ['text','[data-t=grs]','6'], ['text','[data-t=iatxt]','Analizar día con IA ✦'], ['wait',400] ] },
+  { caption: 'Guarda — y el plan de nutrición completo ya está en la app de Manuel.',
+    run: [ ['click','[data-t=guardar]'], ['text','[data-t=guardartxt]','✓ ¡Guardada!'], ['toast','Dieta asignada · Día de entrenamiento'], ['hidecursor'], ['wait',400] ], hold: 2200 }
+]});
+</script>
+
+</body>
+</html>

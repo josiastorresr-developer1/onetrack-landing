@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La IA de OneTrack: In-Body y macros automáticos — Tutorial | Aprende OneTrack</title>
+<meta name="description" content="Mira la IA de OneTrack en acción (plan Unlimited): sube el PDF del In-Body y obtén músculo, grasa, BMI y una recomendación; y calcula los macros de la dieta completa en un toque.">
+<meta property="og:title" content="La IA de OneTrack: In-Body y macros automáticos — Tutorial paso a paso">
+<meta property="og:description" content="Demo guiada: análisis de In-Body desde el PDF y macros del día calculados con IA.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.onetrack.lat/aprende/ia-de-onetrack.html">
+<meta property="og:image" content="https://www.onetrack.lat/assets/onetrack-icon.png">
+<meta name="theme-color" content="#070B16">
+<link rel="canonical" href="https://www.onetrack.lat/aprende/ia-de-onetrack.html" />
+<link rel="alternate" hreflang="es" href="https://www.onetrack.lat/aprende/ia-de-onetrack.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.onetrack.lat/aprende/ia-de-onetrack.html" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/aprende/aprende.css?v=3">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo usar la IA de OneTrack: análisis de In-Body y macros automáticos",
+  "description": "Con el plan Unlimited de OneTrack, la IA trabaja por ti: sube el PDF del In-Body de tu cliente y obtén peso, músculo, grasa y BMI con una recomendación; y calcula los macros de la dieta del día completo en un toque.",
+  "step": [
+    {"@type":"HowToStep","name":"Sube el PDF del In-Body","text":"En el perfil de tu cliente, toca + en la sección In-Body y elige el PDF del análisis de composición corporal."},
+    {"@type":"HowToStep","name":"La IA lo analiza sola","text":"En segundos extrae peso, masa muscular, porcentaje de grasa y BMI directamente del documento."},
+    {"@type":"HowToStep","name":"Recibe una recomendación","text":"La IA resume el análisis con una recomendación concreta para ajustar el plan de tu cliente."},
+    {"@type":"HowToStep","name":"El peso se registra solo","text":"El peso del análisis se guarda automáticamente como check-in del día, sin captura manual."},
+    {"@type":"HowToStep","name":"Calcula macros con IA","text":"En el editor de dieta, el botón Analizar día con IA llena kcal, proteína, carbohidratos y grasas de todos los alimentos del día."}
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="top">
+  <div class="nav-inner">
+    <a href="/" class="brand"><img src="/assets/onetrack-icon.png" alt="" /> OneTrack</a>
+    <div class="nav-links"><a href="/#features">Funciones</a><a href="/#planes">Planes</a><a href="/blog/">Blog</a><a href="/aprende/" style="color:var(--accent-2)">Aprende OneTrack</a></div>
+    <a href="https://apps.apple.com/mx/app/onetrack/id6761740866" class="nav-cta" target="_blank" rel="noopener">Descargar</a>
+  </div>
+</nav>
+
+<header class="ap-hero" style="padding-bottom:44px">
+  <div class="wrap">
+    <div class="ap-crumb"><a href="/">onetrack</a> / <a href="/aprende/">aprende</a> / la ia de onetrack</div>
+    <h1>La IA de OneTrack<span class="dot-acc">.</span></h1>
+    <p>Dos superpoderes del plan Unlimited: el In-Body de tu cliente analizado directo del PDF, y los macros de la dieta completa calculados en un toque. La IA hace la talacha; tú, el coaching.</p>
+    <div class="tut-meta">
+      <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> 2 MIN</span>
+      <span>2 DEMOS GUIADAS</span>
+      <span>PLAN: UNLIMITED · IA ✦</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= DEMO 1 · IN-BODY CON IA ================= -->
+<section class="tut-sect" style="padding-top:16px">
+  <div class="wrap">
+    <div class="eye">Demo 1 · In-Body analizado con IA</div>
+    <h2 class="tut-h">Del PDF al análisis, en segundos</h2>
+    <p class="tut-lead">Tu cliente se hace su In-Body y te manda el PDF. Lo subes al perfil y <em>la IA extrae músculo, grasa y BMI, te da una recomendación</em> — y el peso se registra solo como check-in.</p>
+
+    <div class="dp" id="demoInbody" data-intro="La demo inicia al llegar aquí. También puedes controlarla abajo.">
+      <div class="dp-stage">
+        <template>
+          <div class="m-phone">
+            <div class="m-notch"></div>
+            <div class="m-scr">
+              <div class="m-sb"><span>12:10</span><span class="r"><svg viewBox="0 0 18 12" width="15"><path d="M1 8h2v3H1zM5 6h2v5H5zM9 4h2v7H9zM13 1h2v10h-2z"/></svg><svg viewBox="0 0 25 12" width="21" fill="none"><rect x="1" y="2" width="20" height="8" rx="2.2" stroke="#fff" stroke-opacity=".5"/><rect x="2.6" y="3.6" width="15" height="4.8" rx="1.2" fill="#fff"/><path d="M22.5 5v2" stroke="#fff" stroke-opacity=".5" stroke-linecap="round"/></svg></span></div>
+              <div class="m-body" style="gap:9px">
+                <div class="m-tbar">
+                  <span class="m-gcirc gl"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></span>
+                  <div class="tt"><b>Manuel Carbajal</b><span>Cliente</span></div>
+                  <span class="sp"></span>
+                </div>
+                <!-- In-Body -->
+                <div class="gc" data-t="inbody" style="padding:11px 12px">
+                  <div style="display:flex;align-items:center;gap:6px">
+                    <span class="m-eyebrow">In-Body</span>
+                    <span class="m-aibadge">IA ✦</span>
+                    <span style="flex:1"></span>
+                    <span class="m-gcirc gl sm" data-t="subir"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+                  </div>
+                  <div data-t="empty" style="font-size:10.5px;color:var(--ts);margin-top:9px">Sin In-Body subidos.</div>
+                  <div class="m-ibrow g" data-t="ibrow" style="margin-top:9px">
+                    <svg class="doc" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/></svg>
+                    <span class="nm2">In-Body · 13 jul 2026</span>
+                    <span class="m-ibstat load g" data-t="stload">Analizando…</span>
+                    <span class="m-ibstat ok g" data-t="stok"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/></svg>Analizado</span>
+                  </div>
+                  <div class="m-metrics g" data-t="metrics" style="margin-top:8px">
+                    <div class="m-metric gl"><div class="k">Peso</div><div class="v" data-t="m1"></div></div>
+                    <div class="m-metric gl"><div class="k">Músculo</div><div class="v" data-t="m2"></div></div>
+                    <div class="m-metric gl"><div class="k">Grasa</div><div class="v" data-t="m3"></div></div>
+                    <div class="m-metric gl"><div class="k">BMI</div><div class="v" data-t="m4"></div></div>
+                  </div>
+                  <div class="m-aireco g" data-t="reco" style="margin-top:8px">
+                    <svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/></svg>
+                    <div><div class="t">Recomendación IA</div><div class="x">Masa magra al alza. Sube proteína ~10 g/día y mantén el déficit actual.</div></div>
+                  </div>
+                </div>
+                <!-- último check-in (se actualiza solo) -->
+                <div class="gc" data-t="lastck" style="padding:11px 12px">
+                  <div style="display:flex;align-items:baseline">
+                    <span class="m-eyebrow">Último check-in</span>
+                    <span class="m-count" data-t="ckdate">6 jul 2026</span>
+                  </div>
+                  <div style="font-size:14px;font-weight:700;color:var(--tp);margin-top:6px" data-t="ckw">80.0 kg</div>
+                  <div class="m-quote" data-t="cknote" style="margin-top:3px">“Semana pesada de trabajo, pero cumplí”</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+      <div class="dp-bar">
+        <div class="dp-ctrl">
+          <button data-dp="play" aria-label="Pausar / reproducir"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5L7 4.5z"/></svg></button>
+          <button data-dp="next" aria-label="Siguiente paso"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4.5v15l10-7.5L5 4.5z"/><rect x="17" y="4.5" width="2.6" height="15" rx="1"/></svg></button>
+          <button data-dp="restart" aria-label="Repetir"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></button>
+        </div>
+        <span class="dp-stepnum">·</span>
+        <p class="dp-caption"></p>
+        <div class="dp-dots"></div>
+      </div>
+    </div>
+
+    <ol class="steps-txt">
+      <li><b>Sube el PDF del In-Body.</b> Toca + en la sección In-Body del perfil de tu cliente y elige el archivo.</li>
+      <li><b>La IA lo analiza sola.</b> Peso, masa muscular, porcentaje de grasa y BMI, extraídos del documento en segundos.</li>
+      <li><b>Recibe una recomendación.</b> Un resumen concreto para ajustar el plan de tu cliente.</li>
+      <li><b>El peso se registra solo.</b> El peso del análisis queda como check-in del día automáticamente — sin captura manual.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= DEMO 2 · MACROS CON IA ================= -->
+<section class="tut-sect alt">
+  <div class="wrap">
+    <div class="eye">Demo 2 · Macros del día con IA</div>
+    <h2 class="tut-h">La dieta completa, calculada en un toque</h2>
+    <p class="tut-lead">Ya armaste el día de Manuel: desayuno y comida. En vez de buscar cada alimento en tablas, <em>un toque y la IA llena los macros de todo el día</em>.</p>
+
+    <div class="dp" id="demoMacros" data-intro="La demo inicia al llegar aquí.">
+      <div class="dp-stage">
+        <template>
+          <div class="m-phone">
+            <div class="m-notch"></div>
+            <div class="m-scr">
+              <div class="m-sb"><span>12:18</span><span class="r"><svg viewBox="0 0 18 12" width="15"><path d="M1 8h2v3H1zM5 6h2v5H5zM9 4h2v7H9zM13 1h2v10h-2z"/></svg><svg viewBox="0 0 25 12" width="21" fill="none"><rect x="1" y="2" width="20" height="8" rx="2.2" stroke="#fff" stroke-opacity=".5"/><rect x="2.6" y="3.6" width="15" height="4.8" rx="1.2" fill="#fff"/><path d="M22.5 5v2" stroke="#fff" stroke-opacity=".5" stroke-linecap="round"/></svg></span></div>
+              <div class="m-body" style="gap:8px">
+                <div class="m-tbar">
+                  <span class="m-gcirc gl"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></span>
+                  <div class="tt"><b>Editar dieta</b><span>Manuel Carbajal</span></div>
+                  <span class="sp"></span>
+                </div>
+                <div class="m-gseg gl"><span class="on">Entrenamiento</span><span>Descanso</span></div>
+                <!-- bloque 1 -->
+                <div class="gc" style="padding:10px 12px">
+                  <div style="font-size:12px;font-weight:600;color:var(--tp)">Desayuno</div>
+                  <div style="display:flex;gap:6px;margin-top:7px;align-items:center">
+                    <span style="font-size:10.5px;color:var(--tp);flex:2.4">Avena con plátano</span>
+                    <span style="font-size:10px;color:var(--ts)">80 g</span>
+                  </div>
+                  <div class="m-macros" style="margin-top:6px">
+                    <div class="m-mac gl"><div class="k">kcal</div><div class="v" data-t="a1"></div></div>
+                    <div class="m-mac gl"><div class="k">prot</div><div class="v" data-t="a2"></div></div>
+                    <div class="m-mac gl"><div class="k">carbs</div><div class="v" data-t="a3"></div></div>
+                    <div class="m-mac gl"><div class="k">grs</div><div class="v" data-t="a4"></div></div>
+                  </div>
+                </div>
+                <!-- bloque 2 -->
+                <div class="gc" style="padding:10px 12px">
+                  <div style="font-size:12px;font-weight:600;color:var(--tp)">Comida</div>
+                  <div style="display:flex;gap:6px;margin-top:7px;align-items:center">
+                    <span style="font-size:10.5px;color:var(--tp);flex:2.4">Pechuga a la plancha</span>
+                    <span style="font-size:10px;color:var(--ts)">200 g</span>
+                  </div>
+                  <div class="m-macros" style="margin-top:6px">
+                    <div class="m-mac gl"><div class="k">kcal</div><div class="v" data-t="b1"></div></div>
+                    <div class="m-mac gl"><div class="k">prot</div><div class="v" data-t="b2"></div></div>
+                    <div class="m-mac gl"><div class="k">carbs</div><div class="v" data-t="b3"></div></div>
+                    <div class="m-mac gl"><div class="k">grs</div><div class="v" data-t="b4"></div></div>
+                  </div>
+                  <div style="display:flex;gap:6px;margin-top:8px;align-items:center">
+                    <span style="font-size:10.5px;color:var(--tp);flex:2.4">Arroz blanco</span>
+                    <span style="font-size:10px;color:var(--ts)">150 g</span>
+                  </div>
+                  <div class="m-macros" style="margin-top:6px">
+                    <div class="m-mac gl"><div class="k">kcal</div><div class="v" data-t="c1"></div></div>
+                    <div class="m-mac gl"><div class="k">prot</div><div class="v" data-t="c2"></div></div>
+                    <div class="m-mac gl"><div class="k">carbs</div><div class="v" data-t="c3"></div></div>
+                    <div class="m-mac gl"><div class="k">grs</div><div class="v" data-t="c4"></div></div>
+                  </div>
+                </div>
+                <span style="flex:1"></span>
+                <div class="m-outbtn sec" data-t="ia"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z"/></svg><span data-t="iatxt">Analizar día con IA ✦</span></div>
+                <div class="m-outbtn" data-t="guardar"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-t="guardartxt">Guardar dieta</span></div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+      <div class="dp-bar">
+        <div class="dp-ctrl">
+          <button data-dp="play" aria-label="Pausar / reproducir"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5L7 4.5z"/></svg></button>
+          <button data-dp="next" aria-label="Siguiente paso"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4.5v15l10-7.5L5 4.5z"/><rect x="17" y="4.5" width="2.6" height="15" rx="1"/></svg></button>
+          <button data-dp="restart" aria-label="Repetir"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></button>
+        </div>
+        <span class="dp-stepnum">·</span>
+        <p class="dp-caption"></p>
+        <div class="dp-dots"></div>
+      </div>
+    </div>
+
+    <ol class="steps-txt">
+      <li><b>Arma la dieta normal.</b> Bloques y alimentos con cantidades, como siempre.</li>
+      <li><b>Toca "Analizar día con IA ✦".</b> Un solo botón para el día completo.</li>
+      <li><b>La IA llena los macros de todo.</b> kcal, proteína, carbs y grasas de cada alimento, en segundos. Tú solo revisas y guardas.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="tut-sect" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="cta2">
+      <div class="c hl">
+        <span class="tagc">Plan Unlimited · IA ✦</span>
+        <h3>Deja que la IA haga la talacha</h3>
+        <p>In-Body analizados, macros calculados y recomendaciones — incluidos en el plan Unlimited de OneTrack.</p>
+        <a href="https://apps.apple.com/mx/app/onetrack/id6761740866" class="btn-solid" target="_blank" rel="noopener">Descargar en el App Store</a>
+      </div>
+      <div class="c">
+        <span class="tagc">¿Te falta algún flujo?</span>
+        <h3>Vuelve a empezar</h3>
+        <p>Ya viste el ciclo completo: alta, rutina, dieta, check-ins, progreso e IA. Repasa el que necesites.</p>
+        <a href="/aprende/" class="btn-line">Todos los tutoriales →</a>
+      </div>
+    </div>
+    <div class="tut-next">
+      <a href="/aprende/progreso-e-historial.html">← Anterior: Progreso e historial</a>
+      <a href="/aprende/">Todos los tutoriales →</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="foot-min">
+    <span>© 2026 ONETRACK · APRENDE ONETRACK</span>
+    <span><a href="/aprende/">← Todos los tutoriales</a></span>
+    <span><a href="/">ONETRACK.LAT</a></span>
+  </div>
+</div></footer>
+
+<script src="/aprende/demo-player.js?v=3"></script>
+<script>
+/* ---- Demo 1 · In-Body con IA ---- */
+new DemoPlayer('#demoInbody', { steps: [
+  { caption: 'Manuel se hizo su In-Body y te mandó el PDF. Toca + para subirlo.',
+    run: [ ['click','[data-t=subir]'], ['toast','Subiendo In-Body.pdf…'], ['hide','[data-t=empty]'], ['show','[data-t=ibrow]'], ['show','[data-t=stload]'], ['wait',700] ] },
+  { caption: 'La IA lee el documento… y en segundos extrae las métricas.',
+    run: [ ['hide','[data-t=stload]'], ['show','[data-t=stok]'], ['show','[data-t=metrics]'],
+           ['text','[data-t=m1]','79 kg'], ['wait',150], ['text','[data-t=m2]','36 kg'], ['wait',150], ['text','[data-t=m3]','18 %'], ['wait',150], ['text','[data-t=m4]','24.1'], ['toast','In-Body analizado ✦'], ['wait',400] ] },
+  { caption: 'Y te da una recomendación concreta para ajustar el plan.',
+    run: [ ['show','[data-t=reco]'], ['cls','[data-t=reco]','+hl'], ['wait',800], ['cls','[data-t=reco]','-hl'] ] },
+  { caption: 'Bonus: el peso del análisis se registra solo como check-in del día. Cero captura manual.',
+    run: [ ['move','[data-t=lastck]'], ['cls','[data-t=lastck]','+hl'], ['text','[data-t=ckdate]','13 jul 2026'], ['text','[data-t=ckw]','79.0 kg'], ['text','[data-t=cknote]','Registrado desde tu análisis InBody'], ['toast','Check-in creado automáticamente'], ['wait',500], ['cls','[data-t=lastck]','-hl'], ['hidecursor'] ], hold: 2400 }
+]});
+
+/* ---- Demo 2 · Macros del día con IA ---- */
+new DemoPlayer('#demoMacros', { steps: [
+  { caption: 'El día de Manuel ya está armado: desayuno y comida, tres alimentos.',
+    run: [ ['move','[data-t=ia]'], ['wait',700] ] },
+  { caption: 'Un toque en «Analizar día con IA»…',
+    run: [ ['click','[data-t=ia]'], ['text','[data-t=iatxt]','Analizando…'], ['toast','Analizando el día completo ✦'], ['wait',600] ] },
+  { caption: '…y la IA llena los macros de todos los alimentos del día.',
+    run: [ ['text','[data-t=a1]','312'], ['text','[data-t=a2]','11'], ['wait',130], ['text','[data-t=a3]','54'], ['text','[data-t=a4]','6'], ['wait',200],
+           ['text','[data-t=b1]','330'], ['text','[data-t=b2]','62'], ['wait',130], ['text','[data-t=b3]','0'], ['text','[data-t=b4]','7'], ['wait',200],
+           ['text','[data-t=c1]','195'], ['text','[data-t=c2]','4'], ['wait',130], ['text','[data-t=c3]','42'], ['text','[data-t=c4]','1'],
+           ['text','[data-t=iatxt]','Analizar día con IA ✦'], ['wait',400] ] },
+  { caption: 'Tú solo revisas y guardas. La talacha, hecha.',
+    run: [ ['click','[data-t=guardar]'], ['text','[data-t=guardartxt]','✓ ¡Guardada!'], ['toast','Dieta asignada · macros completos'], ['hidecursor'], ['wait',400] ], hold: 2200 }
+]});
+</script>
+
+</body>
+</html>
