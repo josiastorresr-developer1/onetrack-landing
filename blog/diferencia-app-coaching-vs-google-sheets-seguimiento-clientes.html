@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App de coaching vs Google Sheets: ¿cuál funciona mejor para dar seguimiento a clientes? | Blog OneTrack</title>
+  <meta name="description" content="Comparamos apps de coaching vs Google Sheets para seguimiento de clientes. Pros, contras y cuál conviene según tu número de clientes y presupuesto.">
+  <link rel="canonical" href="https://www.onetrack.lat/blog/diferencia-app-coaching-vs-google-sheets-seguimiento-clientes.html">
+  <meta property="og:title" content="App de coaching vs Google Sheets: ¿cuál funciona mejor para dar seguimiento a clientes?">
+  <meta property="og:description" content="Comparamos apps de coaching vs Google Sheets para seguimiento de clientes. Pros, contras y cuál conviene según tu número de clientes y presupuesto.">
+  <meta property="og:url" content="https://www.onetrack.lat/blog/diferencia-app-coaching-vs-google-sheets-seguimiento-clientes.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="OneTrack">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="App de coaching vs Google Sheets: ¿cuál funciona mejor para dar seguimiento a clientes?">
+  <meta name="twitter:description" content="Comparamos apps de coaching vs Google Sheets para seguimiento de clientes. Pros, contras y cuál conviene según tu número de clientes y presupuesto.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "App de coaching vs Google Sheets: ¿cuál funciona mejor para dar seguimiento a clientes?",
+    "author": {"@type": "Organization", "name": "OneTrack", "url": "https://www.onetrack.lat"},
+    "publisher": {
+      "@type": "Organization",
+      "name": "OneTrack",
+      "url": "https://www.onetrack.lat",
+      "logo": {"@type": "ImageObject", "url": "https://www.onetrack.lat/logo.png"}
+    },
+    "datePublished": "2026-08-03",
+    "dateModified": "2026-08-03",
+    "url": "https://www.onetrack.lat/blog/diferencia-app-coaching-vs-google-sheets-seguimiento-clientes.html",
+    "inLanguage": "es-MX",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.onetrack.lat/blog/diferencia-app-coaching-vs-google-sheets-seguimiento-clientes.html"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Google Sheets funciona bien si tengo menos de 5 clientes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, con menos de 5 clientes una hoja bien organizada puede funcionar. El problema empieza cuando creces: copiar pestañas, actualizar macros a mano y perseguir fotos de check-in por WhatsApp se vuelve un trabajo extra de 3-4 horas por semana que no le cobras a nadie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta una app de coaching comparada con usar Sheets gratis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende de la app. OneTrack, por ejemplo, tiene plan gratuito para hasta 3 clientes. Los planes de pago van de $9.99 a $49.99 USD/mes según el número de clientes y features de IA. Si cobras $1,500-3,000 MXN por cliente, la app se paga con un solo cliente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo migrar mis datos de Google Sheets a una app de coaching?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No hay un botón mágico de importar. Lo que sí puedes hacer es usar plantillas dentro de la app para recrear tus rutinas y planes de dieta una sola vez, y luego asignarlas a cada cliente. En OneTrack las plantillas son reutilizables, así que el trabajo pesado lo haces solo al principio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué pasa si mi cliente no es bueno con la tecnología?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Con Sheets, tu cliente tiene que navegar pestañas, encontrar su día, no mover celdas por error. Con una app el cliente solo abre, ve su rutina del día y marca series completadas. Irónicamente, una app dedicada suele ser más fácil para clientes poco tech que una hoja de cálculo."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box }
+    body { background:#070B16; color:#E8EAF0; font-family:'Inter',sans-serif; line-height:1.7 }
+    nav { background:rgba(7,11,22,0.92); backdrop-filter:blur(12px); position:sticky; top:0;
+           z-index:100; padding:16px 24px; display:flex; justify-content:space-between;
+           align-items:center; border-bottom:1px solid #1a2340 }
+    nav a.logo { color:#fff; font-weight:700; font-size:1.2rem; text-decoration:none }
+    nav a.cta { background:#5B91F5; color:#fff; padding:8px 18px; border-radius:8px;
+                 text-decoration:none; font-size:.9rem; font-weight:600 }
+    main { max-width:800px; margin:0 auto; padding:48px 24px 80px }
+    h1 { font-size:2rem; font-weight:800; color:#fff; line-height:1.2; margin-bottom:12px }
+    h2 { font-size:1.4rem; font-weight:700; color:#fff; margin:40px 0 14px }
+    h3 { font-size:1.1rem; font-weight:600; color:#c8d0e0; margin:28px 0 10px }
+    p  { margin-bottom:18px; color:#c8d0e0 }
+    ul,ol { margin:0 0 18px 24px; color:#c8d0e0 }
+    li { margin-bottom:8px }
+    a  { color:#5B91F5; text-decoration:none }
+    a:hover { text-decoration:underline }
+    .meta { color:#6b7a99; font-size:.9rem; margin-bottom:40px }
+    .faq { margin-top:56px }
+    .faq-item { background:#0d1424; border:1px solid #1a2340; border-radius:12px;
+                 padding:24px; margin-bottom:16px }
+    .faq-item h3 { color:#fff; margin:0 0 10px; font-size:1rem }
+    .faq-item p { margin:0; font-size:.95rem }
+    footer { border-top:1px solid #1a2340; padding:32px 24px; text-align:center;
+              color:#6b7a99; font-size:.875rem }
+    footer a { color:#5B91F5 }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://www.onetrack.lat" class="logo">OneTrack</a>
+    <a href="https://www.onetrack.lat" class="cta">Descargar app</a>
+  </nav>
+
+  <main>
+    <article>
+      <h1>App de coaching vs Google Sheets: ¿cuál funciona mejor para dar seguimiento a clientes?</h1>
+      <p class="meta">Publicado el 3 de agosto de 2026</p>
+
+      <p>Muchos coaches arrancan con una hoja de Google Sheets. Funciona. Nadie dice que no. Haces una pestaña por cliente, pones rutina arriba, dieta abajo, y le compartes el link. Listo.</p>
+
+      <p>Pero hay un momento —generalmente entre el cliente 6 y el 10— donde ese sistema empieza a tronar. No porque Sheets sea malo. Sino porque no fue diseñado para esto.</p>
+
+      <p>Aquí vamos a comparar las dos opciones sin venderte humo. Sheets tiene ventajas reales. Las apps tienen limitaciones reales. Lo que quieres es saber cuál te conviene a ti, hoy, con el número de clientes que manejas.</p>
+
+      <h2>Dónde Google Sheets sí funciona bien</h2>
+
+      <p>Te lo digo de frente: si tienes 3-4 clientes y no te importa invertir tiempo extra organizando hojas, Sheets cumple.</p>
+
+      <ul>
+        <li><strong>Es gratis.</strong> Cero pesos. Si estás empezando y cada peso cuenta, esto pesa.</li>
+        <li><strong>Es flexible.</strong> Puedes poner las columnas que quieras, los colores que quieras, las fórmulas que quieras. Tú controlas todo.</li>
+        <li><strong>Tu cliente ya lo conoce.</strong> No tiene que descargar nada. Le mandas el link y ya.</li>
+        <li><strong>Puedes hacer cálculos personalizados.</strong> ¿Quieres una fórmula rara para calcular el volumen semanal de entrenamiento? Hazla.</li>
+      </ul>
+
+      <p>Esas son ventajas reales, no inventadas. Yo conozco coaches que manejaron 5 clientes en Sheets durante meses sin problema.</p>
+
+      <h2>Dónde Google Sheets empieza a tronar</h2>
+
+      <p>Aquí el punto. La mayoría de los problemas con Sheets no aparecen el día 1. Aparecen el mes 3, cuando ya tienes 8 clientes y cada uno con su pestaña, su historial de check-ins y sus ajustes de dieta.</p>
+
+      <h3>1. El tiempo de administración se come tu día</h3>
+
+      <p>Duplicar la hoja, renombrar pestañas, actualizar los macros de cada cliente cuando haces un ajuste, copiar ejercicios nuevos… todo eso lo haces a mano. Con 8-10 clientes, fácil pierdes 3 horas a la semana solo en eso. Horas que no le cobras a nadie.</p>
+
+      <h3>2. Tu cliente rompe la hoja sin querer</h3>
+
+      <p>Esto pasa más de lo que crees. El cliente borra una fila, mueve una celda, edita la fórmula de los macros. Y tú ni te enteras hasta que revisas la hoja y ves todo descuadrado. Puedes proteger rangos, sí. Pero eso te quita todavía más tiempo.</p>
+
+      <h3>3. No tienes visibilidad real de adherencia</h3>
+
+      <p>¿Tu cliente está siguiendo la rutina? ¿Completó sus comidas ayer? Con Sheets no hay forma de saberlo a menos que el cliente manualmente marque cada cosa. Y la neta, la mayoría no lo hace.</p>
+
+      <h3>4. Check-ins y fotos son un caos</h3>
+
+      <p>Las fotos de progreso te llegan por WhatsApp. Las guardas en una carpeta. O en tu galería. Después no encuentras las del mes pasado. Y comparar fotos de frente/lateral de hace 8 semanas se vuelve una búsqueda arqueológica en tu celular.</p>
+
+      <h3>5. La experiencia del cliente es... una hoja de cálculo</h3>
+
+      <p>No se ve mal. Pero tampoco se ve profesional. Tu cliente abre un link de Google y ve celdas. Funciona, pero si cobras $2,000-3,000 MXN/mes por tu asesoría, el envase importa. La percepción de valor cambia cuando tu cliente abre una app dedicada vs una hoja con borde gris.</p>
+
+      <h2>Qué te da una app de coaching que Sheets no puede</h2>
+
+      <p>Hablo en general de apps de coaching, no solo de una. Después te digo dónde entra OneTrack.</p>
+
+      <h3>Rutinas que el cliente ve sin buscar</h3>
+
+      <p>Abre la app, ve qué toca hoy. Ejercicios, series, repeticiones. Sin navegar pestañas. Algunas apps como OneTrack tienen widget para que el cliente vea su rutina desde la pantalla de inicio del iPhone. Eso es cero fricción.</p>
+
+      <h3>Planes de dieta con macros integrados</h3>
+
+      <p>No necesitas hacer una tabla aparte. Los macros están ahí: kcal, proteína, carbos, grasa. Puedes editarlos por comida. Y en algunas apps puedes usar IA para rellenar la información nutricional automáticamente. Eso te ahorra el cálculo manual que en Sheets haces con fórmulas o a ojo.</p>
+
+      <h3>Seguimiento automático de adherencia</h3>
+
+      <p>En la práctica, esto es lo que más cambia el juego. Un dashboard donde ves qué clientes están activos, quién completó su rutina, quién lleva 3 días sin abrir nada. En Sheets no tienes eso a menos que construyas un sistema elaborado con Apps Script, y aun así es frágil.</p>
+
+      <h3>Check-ins centralizados</h3>
+
+      <p>Fotos, peso, medidas. Todo en un solo lugar. Con gráfica de progreso. Sin buscar en WhatsApp ni en carpetas de Google Drive. Esto sí funciona mejor en app que en cualquier hoja.</p>
+
+      <h3>Plantillas reutilizables</h3>
+
+      <p>Creas una rutina de fuerza para principiantes, la guardas como plantilla, y se la asignas a 5 clientes distintos. En Sheets también puedes duplicar, pero cada copia vive sola y no se actualiza si cambias la original.</p>
+
+      <h2>Lo que nadie dice: las apps también tienen limitaciones</h2>
+
+      <p>No todo es perfecto. Sería deshonesto no mencionarlo.</p>
+
+      <ul>
+        <li><strong>Cuestan dinero.</strong> Una hoja de cálculo es gratis. Una app de coaching puede costar entre $10 y $50 USD al mes dependiendo del plan. Si tienes 3 clientes y cobras $1,500 MXN por cada uno, ese costo es un porcentaje relevante de tu ingreso.</li>
+        <li><strong>Tu cliente tiene que descargar algo.</strong> No todos quieren otra app en su celular. Si tu cliente tiene 55 años y apenas usa WhatsApp, pedirle que descargue una app puede ser un obstáculo real.</li>
+        <li><strong>Pierdes algo de flexibilidad.</strong> En Sheets puedes poner lo que quieras donde quieras. En una app trabajas dentro de la estructura que la app te da. Si tu forma de trabajar es muy atípica, a veces la app no se adapta.</li>
+        <li><strong>Migración inicial.</strong> Si ya tienes todo armado en Sheets, pasar esa info a una app lleva tiempo. No hay un botón de "importar hoja". Tienes que recrear rutinas y dietas dentro de la app.</li>
+      </ul>
+
+      <p>Dicho esto, la mayoría de coaches que hacen la migración recuperan esas horas en las primeras 2-3 semanas. El trabajo pesado es al inicio.</p>
+
+      <h2>Entonces, ¿cuándo conviene cada uno?</h2>
+
+      <h3>Quédate con Sheets si:</h3>
+      <ul>
+        <li>Tienes 3-4 clientes y no planeas crecer pronto</li>
+        <li>Tu presupuesto no da para una suscripción mensual ahorita</li>
+        <li>Tus clientes son tech-savvy y no rompen las hojas</li>
+        <li>No necesitas seguimiento de adherencia automatizado</li>
+      </ul>
+
+      <h3>Muévete a una app si:</h3>
+      <ul>
+        <li>Ya tienes 6+ clientes y el tiempo admin te está comiendo</li>
+        <li>Quieres que tus clientes perciban más valor profesional</li>
+        <li>Necesitas ver quién está siguiendo el plan y quién no</li>
+        <li>Estás cansado de perseguir fotos y datos por WhatsApp</li>
+        <li>Quieres escalar a 15-20 clientes sin duplicar tu tiempo de trabajo</li>
+      </ul>
+
+      <h2>Dónde entra OneTrack en todo esto</h2>
+
+      <p><a href="https://www.onetrack.lat">OneTrack</a> está pensado exactamente para ese momento donde Sheets ya no da. Tiene plan gratuito para hasta 3 clientes, así que puedes probarlo sin pagar nada y ver si la transición te funciona.</p>
+
+      <p>Si creces, los planes van de $9.99 a $49.99 USD/mes. El plan Unlimited incluye features de IA como análisis de macros con un tap y lectura de InBody con PDF, cosas que en Sheets tendrías que hacer a mano siempre.</p>
+
+      <p>El flujo es directo: creas la rutina y la dieta del cliente, le mandas un código de invitación, y el cliente ve todo en su app. Tú ves su progreso en tu dashboard. Check-ins con fotos, gráfica de peso, adherencia. Sin hojas compartidas, sin links de Drive, sin pestañas rotas.</p>
+
+      <p>¿Es perfecto? No. La app es solo iOS por ahora, así que si tu cliente tiene Android, todavía no va a poder usarla. Eso es una limitación real que hay que considerar.</p>
+
+      <h2>El resumen sin rodeos</h2>
+
+      <p>Google Sheets es una herramienta poderosa que no fue hecha para coaching. Funciona, pero te cobra en tiempo lo que no te cobra en dinero.</p>
+
+      <p>Una app de coaching te cobra dinero pero te devuelve 2-3 horas semanales y una experiencia profesional para tu cliente. Un coach que pasó de manejar 8 clientes en Sheets a usar una app me dijo que en 2 meses ya tenía 15 clientes porque el tiempo que antes gastaba en admin ahora lo usaba para captar gente nueva.</p>
+
+      <p>No hay respuesta universal. Depende de dónde estás hoy. Pero si ya estás leyendo esto, probablemente Sheets ya te está quedando corto. Y eso no tiene nada de malo. Significa que estás creciendo.</p>
+
+      <div class="faq">
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-item">
+          <h3>¿Google Sheets funciona bien si tengo menos de 5 clientes?</h3>
+          <p>Sí, con menos de 5 clientes una hoja bien organizada puede funcionar. El problema empieza cuando creces: copiar pestañas, actualizar macros a mano y perseguir fotos de check-in por WhatsApp se vuelve un trabajo extra de 3-4 horas por semana que no le cobras a nadie.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Cuánto cuesta una app de coaching comparada con usar Sheets gratis?</h3>
+          <p>Depende de la app. <a href="https://www.onetrack.lat">OneTrack</a>, por ejemplo, tiene plan gratuito para hasta 3 clientes. Los planes de pago van de $9.99 a $49.99 USD/mes según el número de clientes y features de IA. Si cobras $1,500-3,000 MXN por cliente, la app se paga con un solo cliente.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Puedo migrar mis datos de Google Sheets a una app de coaching?</h3>
+          <p>No hay un botón mágico de importar. Lo que sí puedes hacer es usar plantillas dentro de la app para recrear tus rutinas y planes de dieta una sola vez, y luego asignarlas a cada cliente. En OneTrack las plantillas son reutilizables, así que el trabajo pesado lo haces solo al principio.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Qué pasa si mi cliente no es bueno con la tecnología?</h3>
+          <p>Con Sheets, tu cliente tiene que navegar pestañas, encontrar su día, no mover celdas por error. Con una app el cliente solo abre, ve su rutina del día y marca series completadas. Irónicamente, una app dedicada suele ser más fácil para clientes poco tech que una hoja de cálculo.</p>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 <a href="https://www.onetrack.lat">OneTrack</a>. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
