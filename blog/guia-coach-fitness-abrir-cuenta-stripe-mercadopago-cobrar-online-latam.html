@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía para coaches fitness: cómo abrir cuenta en Stripe o MercadoPago y cobrar online en LATAM | Blog OneTrack</title>
+  <meta name="description" content="Paso a paso real para abrir tu cuenta en Stripe o MercadoPago como coach fitness en LATAM. Comisiones, requisitos, errores comunes y tips prácticos.">
+  <link rel="canonical" href="https://www.onetrack.lat/blog/guia-coach-fitness-abrir-cuenta-stripe-mercadopago-cobrar-online-latam.html">
+  <meta property="og:title" content="Guía para coaches fitness: cómo abrir cuenta en Stripe o MercadoPago y cobrar online en LATAM">
+  <meta property="og:description" content="Paso a paso real para abrir tu cuenta en Stripe o MercadoPago como coach fitness en LATAM. Comisiones, requisitos, errores comunes y tips prácticos.">
+  <meta property="og:url" content="https://www.onetrack.lat/blog/guia-coach-fitness-abrir-cuenta-stripe-mercadopago-cobrar-online-latam.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="OneTrack">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Guía para coaches fitness: cómo abrir cuenta en Stripe o MercadoPago y cobrar online en LATAM">
+  <meta name="twitter:description" content="Paso a paso real para abrir tu cuenta en Stripe o MercadoPago como coach fitness en LATAM. Comisiones, requisitos, errores comunes y tips prácticos.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Guía para coaches fitness: cómo abrir cuenta en Stripe o MercadoPago y cobrar online en LATAM",
+    "author": {"@type": "Organization", "name": "OneTrack", "url": "https://www.onetrack.lat"},
+    "publisher": {
+      "@type": "Organization",
+      "name": "OneTrack",
+      "url": "https://www.onetrack.lat",
+      "logo": {"@type": "ImageObject", "url": "https://www.onetrack.lat/logo.png"}
+    },
+    "datePublished": "2026-11-05",
+    "dateModified": "2026-11-05",
+    "url": "https://www.onetrack.lat/blog/guia-coach-fitness-abrir-cuenta-stripe-mercadopago-cobrar-online-latam.html",
+    "inLanguage": "es-MX",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.onetrack.lat/blog/guia-coach-fitness-abrir-cuenta-stripe-mercadopago-cobrar-online-latam.html"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Puedo usar Stripe si estoy en un país de LATAM donde no opera oficialmente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No directamente. Stripe opera en México, Brasil, Colombia y algunos más, pero no en todos los países de la región. Si no está disponible en tu país, puedes usar Stripe Atlas para crear una entidad en EE.UU., pero eso implica costos extra (alrededor de $500 USD de setup) y obligaciones fiscales en ambos países. Para la mayoría de coaches independientes, MercadoPago o una alternativa local va a ser más práctico y barato."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué pasa si un cliente me pide factura y solo tengo MercadoPago?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MercadoPago no genera facturas fiscales por ti. Tú necesitas estar dado de alta ante tu autoridad fiscal (SAT en México, DIAN en Colombia, etc.) y emitir la factura por tu cuenta. Puedes usar servicios como Facturapi o Alegra que se conectan a tu flujo de cobro. No te saltes este paso: si un cliente te pide factura y no puedes emitirla, pierdes credibilidad y potencialmente ese cliente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto me cobran de comisión Stripe y MercadoPago por cada pago?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En México, Stripe cobra 3.6% + $3 MXN por transacción con tarjeta. MercadoPago cobra entre 3.49% y 4.49% dependiendo del método de pago y si ofreces meses sin intereses. Ambas plataformas pueden cobrar extra por pagos internacionales o conversión de moneda. Haz las cuentas con tu precio real: si cobras $2,000 MXN por cliente, Stripe te descuenta unos $75 y MercadoPago entre $70 y $90."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo cobrar en dólares a clientes de otro país usando estas plataformas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Con Stripe sí, puedes recibir pagos en múltiples monedas y Stripe hace la conversión automática a tu moneda local (con una comisión adicional de 2% por conversión). Con MercadoPago es más limitado: funciona mejor dentro del mismo país. Si tienes clientes en varios países de LATAM, Stripe te da más flexibilidad, pero revisa que opere en el país de tu cliente también."
+        }
+      }
+    ]
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box }
+    body { background:#070B16; color:#E8EAF0; font-family:'Inter',sans-serif; line-height:1.7 }
+    nav { background:rgba(7,11,22,0.92); backdrop-filter:blur(12px); position:sticky; top:0;
+           z-index:100; padding:16px 24px; display:flex; justify-content:space-between;
+           align-items:center; border-bottom:1px solid #1a2340 }
+    nav a.logo { color:#fff; font-weight:700; font-size:1.2rem; text-decoration:none }
+    nav a.cta { background:#5B91F5; color:#fff; padding:8px 18px; border-radius:8px;
+                 text-decoration:none; font-size:.9rem; font-weight:600 }
+    main { max-width:800px; margin:0 auto; padding:48px 24px 80px }
+    h1 { font-size:2rem; font-weight:800; color:#fff; line-height:1.2; margin-bottom:12px }
+    h2 { font-size:1.4rem; font-weight:700; color:#fff; margin:40px 0 14px }
+    h3 { font-size:1.1rem; font-weight:600; color:#c8d0e0; margin:28px 0 10px }
+    p  { margin-bottom:18px; color:#c8d0e0 }
+    ul,ol { margin:0 0 18px 24px; color:#c8d0e0 }
+    li { margin-bottom:8px }
+    a  { color:#5B91F5; text-decoration:none }
+    a:hover { text-decoration:underline }
+    .meta { color:#6b7a99; font-size:.9rem; margin-bottom:40px }
+    .faq { margin-top:56px }
+    .faq-item { background:#0d1424; border:1px solid #1a2340; border-radius:12px;
+                 padding:24px; margin-bottom:16px }
+    .faq-item h3 { color:#fff; margin:0 0 10px; font-size:1rem }
+    .faq-item p { margin:0; font-size:.95rem }
+    footer { border-top:1px solid #1a2340; padding:32px 24px; text-align:center;
+              color:#6b7a99; font-size:.875rem }
+    footer a { color:#5B91F5 }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="https://www.onetrack.lat" class="logo">OneTrack</a>
+    <a href="https://www.onetrack.lat" class="cta">Descargar app</a>
+  </nav>
+  <main>
+    <article>
+      <h1>Guía para coaches fitness: cómo abrir cuenta en Stripe o MercadoPago y cobrar online en LATAM</h1>
+      <p class="meta">Publicado el 5 de noviembre de 2026</p>
+
+      <p>Tienes tu plan de entrenamiento listo. Ya armaste las dietas. Hasta tienes clientes haciendo check-ins cada semana. Pero a la hora de cobrar… sigues pidiendo transferencias por WhatsApp y persiguiendo comprobantes.</p>
+
+      <p>La neta: eso no escala. Y cada vez que un cliente se tarda en pagarte, tú pierdes energía que podrías estar usando para entrenar o captar más gente.</p>
+
+      <p>Aquí te voy a explicar cómo abrir tu cuenta en Stripe o MercadoPago paso a paso, cuál te conviene según tu situación, y los errores que la mayoría de coaches cometen al cobrar online en LATAM.</p>
+
+      <h2>¿Por qué necesitas un procesador de pagos formal?</h2>
+
+      <p>Cobrar por transferencia bancaria funciona cuando tienes 3 o 4 clientes. Cuando llegas a 10 o 15, se vuelve un caos. No sabes quién ya pagó, quién te debe, y terminas mandando mensajes incómodos.</p>
+
+      <p>Un procesador de pagos te da tres cosas concretas:</p>
+      <ul>
+        <li><strong>Links de pago</strong> — mandas un link, el cliente paga con tarjeta o transferencia, listo.</li>
+        <li><strong>Cobros recurrentes</strong> — el cargo se hace automático cada mes. No tienes que recordarle a nadie.</li>
+        <li><strong>Registro limpio</strong> — sabes exactamente cuánto entraste, cuándo y de quién. Esto te salva a la hora de impuestos.</li>
+      </ul>
+
+      <p>Si ya usas una herramienta como <a href="https://www.onetrack.lat">OneTrack</a> para manejar rutinas, dietas y seguimiento de tus clientes, el cobro es la otra mitad de la operación. Una la tienes resuelta. Falta esta.</p>
+
+      <h2>Stripe vs MercadoPago: cuál elegir</h2>
+
+      <p>Te lo digo de frente: no hay uno "mejor". Depende de dónde estés y qué necesites.</p>
+
+      <h3>MercadoPago</h3>
+      <ul>
+        <li>Disponible en México, Argentina, Brasil, Colombia, Chile, Uruguay y Perú.</li>
+        <li>Tus clientes pueden pagar con tarjeta, transferencia, OXXO (México), Rapipago (Argentina), etc.</li>
+        <li>La comisión en México va de 3.49% a 4.49% por transacción.</li>
+        <li>La app es fácil de usar. En 15 minutos tienes tu cuenta lista.</li>
+        <li>El dinero llega a tu cuenta en 1-2 días hábiles (a veces más si eres cuenta nueva).</li>
+      </ul>
+
+      <p><strong>Lo que nadie dice:</strong> MercadoPago puede retener tu dinero las primeras semanas mientras "valida" tu actividad. No te alarmes, pero tenlo presente. Si un cliente te paga $2,500 MXN y no ves el depósito inmediato, es normal al inicio.</p>
+
+      <h3>Stripe</h3>
+      <ul>
+        <li>Disponible en México, Brasil, Colombia y algunos otros países de LATAM (no todos).</li>
+        <li>Comisión en México: 3.6% + $3 MXN por transacción.</li>
+        <li>Mejor para cobros recurrentes con tarjeta — la experiencia de suscripción es muy limpia.</li>
+        <li>La interfaz es más técnica. No es difícil, pero no es tan "plug and play" como MercadoPago.</li>
+        <li>Puedes recibir pagos en varias monedas si tienes clientes en otros países.</li>
+      </ul>
+
+      <p><strong>Aquí el punto:</strong> si la mayoría de tus clientes están en México y quieres que puedan pagar en OXXO o por transferencia SPEI, MercadoPago te va a dar más opciones de métodos de pago locales. Si quieres suscripciones automáticas con tarjeta y te sientes cómodo con algo más técnico, Stripe es mejor.</p>
+
+      <h2>Cómo abrir tu cuenta en MercadoPago (paso a paso)</h2>
+
+      <ol>
+        <li><strong>Entra a <a href="https://www.mercadopago.com.mx" target="_blank" rel="noopener">mercadopago.com.mx</a></strong> (o el dominio de tu país) y crea tu cuenta con tu email.</li>
+        <li><strong>Valida tu identidad.</strong> Te van a pedir una foto de tu INE/IFE (o documento equivalente en tu país) y un selfie. Esto tarda entre 5 minutos y 24 horas.</li>
+        <li><strong>Vincula tu cuenta bancaria.</strong> Necesitas una cuenta a tu nombre. No uses la cuenta de alguien más — te van a bloquear el retiro.</li>
+        <li><strong>Activa el cobro con link de pago.</strong> Ve a la sección "Cobrar" > "Link de pago". Pon el nombre del servicio (ej. "Plan mensual coaching"), el precio, y genera el link.</li>
+        <li><strong>Manda ese link por WhatsApp a tu cliente.</strong> Ellos eligen cómo pagar.</li>
+      </ol>
+
+      <p>Para cobros recurrentes, MercadoPago tiene la opción de suscripciones, pero funciona así: el cliente autoriza el cargo mensual con su tarjeta. No todos los clientes se sienten cómodos con esto, y en la práctica algunos lo rechazan. Tenlo en cuenta.</p>
+
+      <p><strong>Acción concreta:</strong> empieza con links de pago manuales. Cuando ya tengas más de 8 clientes pagando, migra a suscripciones automáticas.</p>
+
+      <h2>Cómo abrir tu cuenta en Stripe (paso a paso)</h2>
+
+      <ol>
+        <li><strong>Entra a <a href="https://dashboard.stripe.com/register" target="_blank" rel="noopener">dashboard.stripe.com/register</a></strong> y crea tu cuenta.</li>
+        <li><strong>Completa el onboarding.</strong> Stripe te va a pedir datos fiscales: tu RFC (en México), dirección, tipo de negocio. Si eres persona física con actividad empresarial, selecciona "Individual/Sole proprietor".</li>
+        <li><strong>Agrega tu cuenta bancaria</strong> para recibir los depósitos. Mismo consejo: a tu nombre.</li>
+        <li><strong>Crea un producto.</strong> En el dashboard, ve a "Products" > "Add product". Define nombre, precio y si es pago único o recurrente.</li>
+        <li><strong>Genera un Payment Link.</strong> Stripe te da un link que puedes compartir. El cliente paga con tarjeta y tú recibes el dinero en 2-3 días hábiles.</li>
+      </ol>
+
+      <p><strong>Un detalle que te puede frenar:</strong> Stripe pide más información durante el registro que MercadoPago. Si no tienes tu situación fiscal en orden (RFC activo, constancia de situación fiscal), no vas a poder completar el proceso. Esto no es culpa de Stripe — es que opera bajo regulaciones más estrictas.</p>
+
+      <p><strong>Acción concreta:</strong> antes de registrarte en Stripe, descarga tu constancia de situación fiscal del SAT (o equivalente en tu país). Te la van a pedir.</p>
+
+      <h2>Cuánto te queda después de comisiones</h2>
+
+      <p>Vamos con números reales. Digamos que cobras $2,000 MXN/mes por cliente.</p>
+
+      <ul>
+        <li><strong>Stripe:</strong> $2,000 × 3.6% + $3 = $75 MXN de comisión. Te quedan $1,925.</li>
+        <li><strong>MercadoPago (tarjeta):</strong> $2,000 × 3.99% = $79.80 MXN. Te quedan $1,920.</li>
+        <li><strong>MercadoPago (transferencia/OXXO):</strong> varía, pero generalmente entre $50 y $70 MXN.</li>
+      </ul>
+
+      <p>Con 15 clientes a $2,000, estás pagando entre $750 y $1,200 al mes en comisiones. Suena a mucho, pero compáralo con el tiempo que te ahorra. Si antes dedicabas 3-4 horas al mes persiguiendo pagos, esas horas ahora las usas para atender clientes o conseguir nuevos.</p>
+
+      <p>Y ojo: esto es deducible de impuestos. Guarda todos los recibos.</p>
+
+      <h2>Errores comunes que veo en coaches</h2>
+
+      <h3>1. No separar la cuenta personal de la cuenta de negocio</h3>
+      <p>Si metes todo a tu cuenta personal, a la hora de declarar impuestos vas a tener un desastre. Abre una cuenta bancaria separada para tu coaching. No necesitas una cuenta empresarial cara — muchos bancos tienen cuentas sin comisión.</p>
+
+      <h3>2. Ofrecer meses sin intereses sin calcular el costo</h3>
+      <p>MercadoPago te deja ofrecer MSI, pero la comisión sube. En algunos casos pasa del 4% al 8-12%. Si cobras $3,000 MXN a 6 MSI, te pueden descontar hasta $360. Haz la cuenta antes de activarlo.</p>
+
+      <h3>3. No tener un sistema para saber quién pagó y quién no</h3>
+      <p>Esto sí funciona bien cuando combinas tu procesador de pagos con tu gestión de clientes. Si usas <a href="https://www.onetrack.lat">OneTrack</a> para llevar las rutinas y el seguimiento, ya tienes la lista de clientes activos. Crúzala con tus cobros en Stripe o MercadoPago cada semana. 5 minutos y sabes exactamente dónde estás.</p>
+
+      <h3>4. Cobrar solo por transferencia "porque es más fácil"</h3>
+      <p>Te lo digo de frente: vas a perder clientes por esto. Hay gente que quiere pagar con tarjeta de crédito porque está cuidando su flujo de efectivo. Otros no tienen tu banco y la transferencia interbancaria tarda. Dale opciones a tu cliente.</p>
+
+      <h2>Un flujo que funciona en la práctica</h2>
+
+      <p>Esto es lo que hacen coaches que ya lo tienen resuelto y manejan entre 12 y 25 clientes:</p>
+
+      <ol>
+        <li>El cliente nuevo llega (por recomendación, redes, lo que sea).</li>
+        <li>Le mandas tu link de pago de Stripe o MercadoPago por WhatsApp.</li>
+        <li>El cliente paga. Tú recibes la notificación.</li>
+        <li>Le mandas su código de invitación de <a href="https://apps.apple.com/mx/app/onetrack/id6761740866">OneTrack</a> para que se vincule contigo en la app.</li>
+        <li>Le asignas su rutina y plan de dieta desde tus plantillas.</li>
+        <li>Cada mes, el cobro se repite automático (si configuraste suscripción) o mandas el link de nuevo.</li>
+      </ol>
+
+      <p>Todo el proceso toma menos de 10 minutos por cliente nuevo. Sin perseguir pagos. Sin "oye, ya me depositaste?".</p>
+
+      <h2>¿Y si estoy en un país donde Stripe no opera?</h2>
+
+      <p>En LATAM hay países donde Stripe todavía no está disponible (Venezuela, Ecuador, Bolivia, entre otros). En ese caso:</p>
+
+      <ul>
+        <li><strong>MercadoPago</strong> si estás en Argentina, Chile, Uruguay, Perú, Colombia o Brasil.</li>
+        <li><strong>PayU</strong> funciona en varios países de LATAM y tiene buena cobertura de métodos de pago locales.</li>
+        <li><strong>Bold</strong> (Colombia) es otra opción si tus clientes son colombianos.</li>
+        <li><strong>Stripe Atlas</strong> te permite crear una empresa en EE.UU. y usar Stripe desde ahí, pero el costo de setup ($500 USD) y las obligaciones fiscales dobles lo hacen poco práctico para un coach que está empezando.</li>
+      </ul>
+
+      <p><strong>Acción concreta:</strong> revisa qué procesadores operan en tu país y cuáles aceptan personas físicas (no solo empresas). Ese filtro te ahorra horas de búsqueda.</p>
+
+      <h2>Lo fiscal: no lo ignores</h2>
+
+      <p>Este es el tema que todos los coaches quieren saltarse. Pero aquí va: si estás cobrando con procesador de pagos, esas transacciones quedan registradas. El SAT (o la autoridad fiscal de tu país) puede verlas.</p>
+
+      <p>Si estás en México, date de alta en el régimen de Persona Física con Actividad Empresarial o en el RESICO (Régimen Simplificado de Confianza) si facturas menos de $3.5 millones al año. Un contador que sepa de freelancers te cobra entre $500 y $1,500 MXN al mes y te quita ese problema de encima.</p>
+
+      <p>No es opcional. Es parte de tener un negocio real.</p>
+
+      <div class="faq">
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-item">
+          <h3>¿Puedo usar Stripe si estoy en un país de LATAM donde no opera oficialmente?</h3>
+          <p>No directamente. Stripe opera en México, Brasil, Colombia y algunos más, pero no en todos los países de la región. Si no está disponible en tu país, puedes usar Stripe Atlas para crear una entidad en EE.UU., pero eso implica costos extra (alrededor de $500 USD de setup) y obligaciones fiscales en ambos países. Para la mayoría de coaches independientes, MercadoPago o una alternativa local va a ser más práctico y barato.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Qué pasa si un cliente me pide factura y solo tengo MercadoPago?</h3>
+          <p>MercadoPago no genera facturas fiscales por ti. Tú necesitas estar dado de alta ante tu autoridad fiscal (SAT en México, DIAN en Colombia, etc.) y emitir la factura por tu cuenta. Puedes usar servicios como Facturapi o Alegra que se conectan a tu flujo de cobro. No te saltes este paso: si un cliente te pide factura y no puedes emitirla, pierdes credibilidad y potencialmente ese cliente.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Cuánto me cobran de comisión Stripe y MercadoPago por cada pago?</h3>
+          <p>En México, Stripe cobra 3.6% + $3 MXN por transacción con tarjeta. MercadoPago cobra entre 3.49% y 4.49% dependiendo del método de pago y si ofreces meses sin intereses. Ambas plataformas pueden cobrar extra por pagos internacionales o conversión de moneda. Haz las cuentas con tu precio real: si cobras $2,000 MXN por cliente, Stripe te descuenta unos $75 y MercadoPago entre $70 y $90.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Puedo cobrar en dólares a clientes de otro país usando estas plataformas?</h3>
+          <p>Con Stripe sí, puedes recibir pagos en múltiples monedas y Stripe hace la conversión automática a tu moneda local (con una comisión adicional de 2% por conversión). Con MercadoPago es más limitado: funciona mejor dentro del mismo país. Si tienes clientes en varios países de LATAM, Stripe te da más flexibilidad, pero revisa que opere en el país de tu cliente también.</p>
+        </div>
+      </div>
+
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2026 <a href="https://www.onetrack.lat">OneTrack</a>. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
